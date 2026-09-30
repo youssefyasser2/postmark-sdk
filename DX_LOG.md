@@ -29,3 +29,12 @@ Evaluation start: Wed Sep 30 17:59:43 EEST 2026.
 - DX verdict: The command and flags worked, but the scaffold’s success masked an unsupported Node major version and did not create the README/AGENTS/target outputs until a later generate step.
 - Log maintenance note: the first attempt to append this entry failed with exact text `patch: **** malformed patch at line 14:`; the hunk count was corrected and the entry was then applied.
 
+## Step 3 — Baseline commit
+
+- Timestamp: Wed Sep 30 18:07:32 EEST 2026; elapsed: 649 seconds.
+- Commands: `patch ... .gitignore`; `git init`; `git add .`; `git commit -m "scaffold from Postmark server spec"`.
+- Result: success. Commit created: `1a3588a scaffold from Postmark server spec`. The ignore file covers `node_modules`, `.env`/ `.env.*` (while allowing `.env.example`), and build/test output including `dist/`, `build/`, `coverage/`, `.pytest_cache/`, and `__pycache__/`. Git emitted the exact hint that the default initial branch name is `master`.
+- Docs escape: no for Git; repository-level ignore rules were added from the task requirements. The first two patch attempts failed with exact text `patch: **** malformed patch at line 17: +__pycache__/` and `Hunk #1 FAILED at 1`; the corrected patch succeeded, and reject artifacts were removed.
+- DX verdict: The baseline checkpoint is reliable, but adding a small ignore rule required avoidable patch-hunk troubleshooting under the broken patch helper.
+- Log maintenance note: the first attempt to append this entry failed with exact text `patch: **** malformed patch at line 13:`; the hunk count was corrected and the entry was then applied.
+
