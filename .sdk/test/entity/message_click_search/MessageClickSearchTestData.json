@@ -1,0 +1,88 @@
+{
+  "existing": {
+    "message_click_search": {
+      "MESSAGE_CLICK_SEARCH00": {
+        "ClickLocation": "s82",
+        "Clicks": [],
+        "Client": "s84",
+        "Geo": "s85",
+        "MessageID": "s86",
+        "OS": "s87",
+        "OriginalLink": "s88",
+        "Platform": "s89",
+        "ReceivedAt": "s8a",
+        "Recipient": "s8b",
+        "Tag": "s8c",
+        "TotalCount": 141,
+        "UserAgent": "s8e",
+        "messageid": "MESSAGEID01",
+        "id": "MESSAGE_CLICK_SEARCH00"
+      },
+      "MESSAGE_CLICK_SEARCH01": {
+        "ClickLocation": "s104",
+        "Clicks": [],
+        "Client": "s106",
+        "Geo": "s107",
+        "MessageID": "s108",
+        "OS": "s109",
+        "OriginalLink": "s10a",
+        "Platform": "s10b",
+        "ReceivedAt": "s10c",
+        "Recipient": "s10d",
+        "Tag": "s10e",
+        "TotalCount": 271,
+        "UserAgent": "s110",
+        "messageid": "MESSAGEID01",
+        "id": "MESSAGE_CLICK_SEARCH01"
+      },
+      "MESSAGE_CLICK_SEARCH02": {
+        "ClickLocation": "s186",
+        "Clicks": [],
+        "Client": "s188",
+        "Geo": "s189",
+        "MessageID": "s18a",
+        "OS": "s18b",
+        "OriginalLink": "s18c",
+        "Platform": "s18d",
+        "ReceivedAt": "s18e",
+        "Recipient": "s18f",
+        "Tag": "s190",
+        "TotalCount": 401,
+        "UserAgent": "s192",
+        "messageid": "MESSAGEID01",
+        "id": "MESSAGE_CLICK_SEARCH02"
+      }
+    }
+  },
+  "new": {
+    "message_click_search": {
+      "message_click_search_ref01": {
+        "ClickLocation": "s208",
+        "Clicks": [],
+        "Client": "s20a",
+        "Geo": "s20b",
+        "MessageID": "s20c",
+        "OS": "s20d",
+        "OriginalLink": "s20e",
+        "Platform": "s20f",
+        "ReceivedAt": "s210",
+        "Recipient": "s211",
+        "Tag": "s212",
+        "TotalCount": 531,
+        "UserAgent": "s214"
+      }
+    }
+  },
+  "requests": {
+    "GET /messages/outbound/clicks": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "GET /messages/outbound/clicks/{messageid}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

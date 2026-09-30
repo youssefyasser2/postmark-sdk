@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "outbound_message_dump": {
+      "OUTBOUND_MESSAGE_DUMP00": {
+        "Body": "s14",
+        "id": "OUTBOUND_MESSAGE_DUMP00"
+      },
+      "OUTBOUND_MESSAGE_DUMP01": {
+        "Body": "s28",
+        "id": "OUTBOUND_MESSAGE_DUMP01"
+      },
+      "OUTBOUND_MESSAGE_DUMP02": {
+        "Body": "s3c",
+        "id": "OUTBOUND_MESSAGE_DUMP02"
+      }
+    }
+  },
+  "new": {
+    "outbound_message_dump": {
+      "outbound_message_dump_ref01": {
+        "Body": "s50"
+      }
+    }
+  },
+  "requests": {
+    "GET /messages/outbound/{messageid}/dump": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

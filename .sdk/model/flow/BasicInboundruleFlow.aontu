@@ -1,0 +1,59 @@
+# BasicInboundruleFlow
+
+main: kit: flow: BasicInboundruleFlow:
+{
+  entity: "inboundrule",
+  kind: "basic",
+  name: "BasicInboundruleFlow",
+  step: [
+    {
+      i: {
+        ref: "inboundrule_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "inboundrule_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "inboundrule_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "inboundrule01"
+      }
+
+      o: "remove"
+    }
+
+    {
+      i: {
+        suffix: "_rt0"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemNotExists",
+          def: {
+            ref: "inboundrule_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicInboundruleFlow"
+}

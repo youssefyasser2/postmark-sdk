@@ -1,0 +1,46 @@
+{
+  "existing": {
+    "inboundrule": {
+      "INBOUNDRULE00": {
+        "ID": 30,
+        "Rule": "s1f",
+        "id": "INBOUNDRULE00"
+      },
+      "INBOUNDRULE01": {
+        "ID": 60,
+        "Rule": "s3d",
+        "id": "INBOUNDRULE01"
+      },
+      "INBOUNDRULE02": {
+        "ID": 90,
+        "Rule": "s5b",
+        "id": "INBOUNDRULE02"
+      }
+    }
+  },
+  "new": {
+    "inboundrule": {
+      "inboundrule_ref01": {
+        "ID": 120,
+        "Rule": "s79"
+      }
+    }
+  },
+  "requests": {
+    "POST /triggers/inboundrules": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "GET /triggers/inboundrules": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "DELETE /triggers/inboundrules/{triggerid}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

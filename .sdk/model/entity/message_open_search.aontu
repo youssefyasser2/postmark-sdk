@@ -1,0 +1,325 @@
+# Entity: message_open_search
+
+main: kit: entity: message_open_search: {
+
+  alias: field: {}
+
+  fields: {
+    Client: {
+      h: "Client"
+      n: "Client"
+      r: false
+      t: "`$ANY`"
+    }
+    FirstOpen: {
+      h: "First Open"
+      n: "FirstOpen"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    Geo: {
+      h: "Geo"
+      n: "Geo"
+      r: false
+      t: "`$ANY`"
+    }
+    MessageID: {
+      h: "Message Id"
+      n: "MessageID"
+      r: false
+      t: "`$STRING`"
+    }
+    OS: {
+      h: "Os"
+      n: "OS"
+      r: false
+      t: "`$ANY`"
+    }
+    Opens: {
+      h: "Opens"
+      n: "Opens"
+      r: false
+      t: "`$ARRAY`"
+    }
+    Platform: {
+      h: "Platform"
+      n: "Platform"
+      r: false
+      t: "`$STRING`"
+    }
+    ReceivedAt: {
+      fo: "date-time"
+      h: "Received At"
+      n: "ReceivedAt"
+      r: false
+      t: "`$STRING`"
+    }
+    Recipient: {
+      fo: "email"
+      h: "Recipient"
+      n: "Recipient"
+      r: false
+      t: "`$STRING`"
+    }
+    Tag: {
+      h: "Tag"
+      n: "Tag"
+      r: false
+      t: "`$STRING`"
+    }
+    TotalCount: {
+      h: "Total Count"
+      n: "TotalCount"
+      r: false
+      t: "`$INTEGER`"
+    }
+    UserAgent: {
+      h: "User Agent"
+      n: "UserAgent"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "message_open_search"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /messages/outbound/opens"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "city"
+                or: "city"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "client_company"
+                or: "client_company"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "client_family"
+                or: "client_family"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "client_name"
+                or: "client_name"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "count"
+                or: "count"
+                r: true
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "country"
+                or: "country"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "offset"
+                or: "offset"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "os_company"
+                or: "os_company"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "os_family"
+                or: "os_family"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "os_name"
+                or: "os_name"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "platform"
+                or: "platform"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "recipient"
+                or: "recipient"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "region"
+                or: "region"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/messages/outbound/opens"
+          q: {
+            exist: [
+              "city"
+              "client_company"
+              "client_family"
+              "client_name"
+              "count"
+              "country"
+              "offset"
+              "os_company"
+              "os_family"
+              "os_name"
+              "platform"
+              "recipient"
+              "region"
+              "tag"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "messages"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "opens"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Opens`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /messages/outbound/opens/{messageid}"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            params: [
+              {
+                k: "param"
+                n: "messageid"
+                or: "messageid"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "count"
+                or: "count"
+                r: true
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "offset"
+                or: "offset"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/messages/outbound/opens/{messageid}"
+          q: {
+            exist: [
+              "count"
+              "messageid"
+              "offset"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "messages"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "opens"
+            }
+            {
+              var: "messageid"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

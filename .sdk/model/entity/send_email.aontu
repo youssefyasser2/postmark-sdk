@@ -1,0 +1,143 @@
+# Entity: send_email
+
+main: kit: entity: send_email: {
+
+  alias: field: {}
+
+  fields: {
+    ErrorCode: {
+      h: "Error Code"
+      n: "ErrorCode"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Message: {
+      h: "Message"
+      n: "Message"
+      r: false
+      t: "`$STRING`"
+    }
+    MessageID: {
+      h: "Message Id"
+      n: "MessageID"
+      r: false
+      t: "`$STRING`"
+    }
+    SubmittedAt: {
+      fo: "date-time"
+      h: "Submitted At"
+      n: "SubmittedAt"
+      r: false
+      t: "`$STRING`"
+    }
+    To: {
+      h: "To"
+      n: "To"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "send_email"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /email"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "body"
+                or: "body"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/email"
+          q: {
+            exist: [
+              "body"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "email"
+            }
+          ]
+          t: {
+            req: "`reqdata.body`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /email/withTemplate"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "body"
+                or: "body"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/email/withTemplate"
+          q: {
+            exist: [
+              "body"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "email"
+            }
+            {
+              lit: "withTemplate"
+            }
+          ]
+          t: {
+            req: "`reqdata.body`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

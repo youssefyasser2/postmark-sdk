@@ -1,0 +1,84 @@
+{
+  "existing": {
+    "message_open_search": {
+      "MESSAGE_OPEN_SEARCH00": {
+        "Client": "s78",
+        "FirstOpen": false,
+        "Geo": "s7a",
+        "MessageID": "s7b",
+        "OS": "s7c",
+        "Opens": [],
+        "Platform": "s7e",
+        "ReceivedAt": "s7f",
+        "Recipient": "s80",
+        "Tag": "s81",
+        "TotalCount": 130,
+        "UserAgent": "s83",
+        "messageid": "MESSAGEID01",
+        "id": "MESSAGE_OPEN_SEARCH00"
+      },
+      "MESSAGE_OPEN_SEARCH01": {
+        "Client": "sf0",
+        "FirstOpen": false,
+        "Geo": "sf2",
+        "MessageID": "sf3",
+        "OS": "sf4",
+        "Opens": [],
+        "Platform": "sf6",
+        "ReceivedAt": "sf7",
+        "Recipient": "sf8",
+        "Tag": "sf9",
+        "TotalCount": 250,
+        "UserAgent": "sfb",
+        "messageid": "MESSAGEID01",
+        "id": "MESSAGE_OPEN_SEARCH01"
+      },
+      "MESSAGE_OPEN_SEARCH02": {
+        "Client": "s168",
+        "FirstOpen": false,
+        "Geo": "s16a",
+        "MessageID": "s16b",
+        "OS": "s16c",
+        "Opens": [],
+        "Platform": "s16e",
+        "ReceivedAt": "s16f",
+        "Recipient": "s170",
+        "Tag": "s171",
+        "TotalCount": 370,
+        "UserAgent": "s173",
+        "messageid": "MESSAGEID01",
+        "id": "MESSAGE_OPEN_SEARCH02"
+      }
+    }
+  },
+  "new": {
+    "message_open_search": {
+      "message_open_search_ref01": {
+        "Client": "s1e0",
+        "FirstOpen": false,
+        "Geo": "s1e2",
+        "MessageID": "s1e3",
+        "OS": "s1e4",
+        "Opens": [],
+        "Platform": "s1e6",
+        "ReceivedAt": "s1e7",
+        "Recipient": "s1e8",
+        "Tag": "s1e9",
+        "TotalCount": 490,
+        "UserAgent": "s1eb"
+      }
+    }
+  },
+  "requests": {
+    "GET /messages/outbound/opens": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "GET /messages/outbound/opens/{messageid}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

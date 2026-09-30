@@ -1,5 +1,23 @@
 # API Information
 
 
-
+main: {
+  kit: {
+    info: {
+      auth: false
+      description: `Postmark makes sending and receiving email
+incredibly easy.
+`
+      servers: [
+        {
+          url: "https://api.postmarkapp.com"
+        }
+      ]
+      summary: "Postmark makes sending and receiving email incredibly easy."
+      title: "Postmark API"
+      version: "1.0.0"
+      website: "https://postmarkapp.com"
+    }
+  }
+}
 

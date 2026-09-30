@@ -1,0 +1,18 @@
+# BasicTemplateValidationFlow
+
+main: kit: flow: BasicTemplateValidationFlow:
+{
+  entity: "template_validation",
+  kind: "basic",
+  name: "BasicTemplateValidationFlow",
+  step: [
+    {
+      i: {
+        ref: "template_validation_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicTemplateValidationFlow"
+}

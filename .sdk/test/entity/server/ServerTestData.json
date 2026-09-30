@@ -1,0 +1,109 @@
+{
+  "existing": {
+    "server": {
+      "SERVER00": {
+        "ApiTokens": [],
+        "BounceHookUrl": "sbf",
+        "ClickHookUrl": "sc0",
+        "Color": "sc1",
+        "DeliveryHookUrl": "sc2",
+        "ID": 195,
+        "InboundAddress": "sc4",
+        "InboundDomain": "sc5",
+        "InboundHash": "sc6",
+        "InboundHookUrl": "sc7",
+        "InboundSpamThreshold": 200,
+        "Name": "sc9",
+        "OpenHookUrl": "sca",
+        "PostFirstOpenOnly": false,
+        "RawEmailEnabled": true,
+        "ServerLink": "scd",
+        "SmtpApiActivated": true,
+        "TrackLinks": "scf",
+        "TrackOpens": true,
+        "id": "SERVER00"
+      },
+      "SERVER01": {
+        "ApiTokens": [],
+        "BounceHookUrl": "s17d",
+        "ClickHookUrl": "s17e",
+        "Color": "s17f",
+        "DeliveryHookUrl": "s180",
+        "ID": 385,
+        "InboundAddress": "s182",
+        "InboundDomain": "s183",
+        "InboundHash": "s184",
+        "InboundHookUrl": "s185",
+        "InboundSpamThreshold": 390,
+        "Name": "s187",
+        "OpenHookUrl": "s188",
+        "PostFirstOpenOnly": false,
+        "RawEmailEnabled": true,
+        "ServerLink": "s18b",
+        "SmtpApiActivated": true,
+        "TrackLinks": "s18d",
+        "TrackOpens": true,
+        "id": "SERVER01"
+      },
+      "SERVER02": {
+        "ApiTokens": [],
+        "BounceHookUrl": "s23b",
+        "ClickHookUrl": "s23c",
+        "Color": "s23d",
+        "DeliveryHookUrl": "s23e",
+        "ID": 575,
+        "InboundAddress": "s240",
+        "InboundDomain": "s241",
+        "InboundHash": "s242",
+        "InboundHookUrl": "s243",
+        "InboundSpamThreshold": 580,
+        "Name": "s245",
+        "OpenHookUrl": "s246",
+        "PostFirstOpenOnly": false,
+        "RawEmailEnabled": true,
+        "ServerLink": "s249",
+        "SmtpApiActivated": true,
+        "TrackLinks": "s24b",
+        "TrackOpens": true,
+        "id": "SERVER02"
+      }
+    }
+  },
+  "new": {
+    "server": {
+      "server_ref01": {
+        "ApiTokens": [],
+        "BounceHookUrl": "s2f9",
+        "ClickHookUrl": "s2fa",
+        "Color": "s2fb",
+        "DeliveryHookUrl": "s2fc",
+        "ID": 765,
+        "InboundAddress": "s2fe",
+        "InboundDomain": "s2ff",
+        "InboundHash": "s300",
+        "InboundHookUrl": "s301",
+        "InboundSpamThreshold": 770,
+        "Name": "s303",
+        "OpenHookUrl": "s304",
+        "PostFirstOpenOnly": false,
+        "RawEmailEnabled": true,
+        "ServerLink": "s307",
+        "SmtpApiActivated": true,
+        "TrackLinks": "s309",
+        "TrackOpens": true
+      }
+    }
+  },
+  "requests": {
+    "GET /server": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "PUT /server": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

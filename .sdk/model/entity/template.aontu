@@ -1,0 +1,378 @@
+# Entity: template
+
+main: kit: entity: template: {
+
+  alias: field: {}
+
+  fields: {
+    Active: {
+      h: "Active"
+      n: "Active"
+      r: false
+      sh: "Indicates that this template may be used for sending email."
+      t: "`$BOOLEAN`"
+    }
+    Alias: {
+      h: "Alias"
+      n: "Alias"
+      r: false
+      sh: "The user-supplied alias for this template."
+      t: "`$STRING`"
+    }
+    AssociatedServerId: {
+      h: "Associated Server Id"
+      n: "AssociatedServerId"
+      r: false
+      sh: "The ID of the Server with which this template is associated."
+      t: "`$INTEGER`"
+    }
+    HtmlBody: {
+      h: "Html Body"
+      n: "HtmlBody"
+      r: false
+      sh: "The content to use for the HtmlBody when this template is used to send email."
+      t: "`$STRING`"
+    }
+    Name: {
+      h: "Name"
+      n: "Name"
+      r: false
+      sh: "The display name for the template."
+      t: "`$STRING`"
+    }
+    Subject: {
+      h: "Subject"
+      n: "Subject"
+      r: false
+      sh: "The content to use for the Subject when this template is used to send email."
+      t: "`$STRING`"
+    }
+    TemplateID: {
+      h: "Template Id"
+      n: "TemplateID"
+      r: false
+      sh: "The ID associated with the template."
+      t: "`$INTEGER`"
+    }
+    TemplateId: {
+      fo: "int"
+      h: "Template Id"
+      n: "TemplateId"
+      r: false
+      sh: "The associated ID for this template."
+      t: "`$NUMBER`"
+    }
+    TextBody: {
+      h: "Text Body"
+      n: "TextBody"
+      r: false
+      sh: "The content to use for the TextBody when this template is used to send email."
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "template"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /templates"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "body"
+                or: "body"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/templates"
+          q: {
+            exist: [
+              "body"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "templates"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /templates"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "count"
+                or: "Count"
+                r: true
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "offset"
+                or: "Offset"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/templates"
+          q: {
+            exist: [
+              "count"
+              "offset"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "templates"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Templates API`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /templates/{templateIdOrAlias}"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "templateIdOrAlias"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/templates/{templateIdOrAlias}"
+          q: {
+            exist: [
+              "id"
+              "x_postmark_server_token"
+            ]
+          }
+          r: {
+            param: {
+              templateIdOrAlias: "id"
+            }
+          }
+          s: [
+            {
+              lit: "templates"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /templates/{templateIdOrAlias}"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "templateIdOrAlias"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/templates/{templateIdOrAlias}"
+          q: {
+            exist: [
+              "id"
+              "x_postmark_server_token"
+            ]
+          }
+          r: {
+            param: {
+              templateIdOrAlias: "id"
+            }
+          }
+          s: [
+            {
+              lit: "templates"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /templates/{templateIdOrAlias}"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "templateIdOrAlias"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "body"
+                or: "body"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/templates/{templateIdOrAlias}"
+          q: {
+            exist: [
+              "body"
+              "id"
+              "x_postmark_server_token"
+            ]
+          }
+          r: {
+            param: {
+              templateIdOrAlias: "id"
+            }
+          }
+          s: [
+            {
+              lit: "templates"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

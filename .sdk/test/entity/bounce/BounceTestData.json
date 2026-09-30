@@ -1,0 +1,98 @@
+{
+  "existing": {
+    "bounce": {
+      "BOUNCE00": {
+        "BouncedAt": "sa0",
+        "CanActivate": false,
+        "Content": "sa2",
+        "Description": "sa3",
+        "Details": "sa4",
+        "DumpAvailable": false,
+        "Email": "sa6",
+        "ID": "sa7",
+        "Inactive": true,
+        "MessageID": "sa9",
+        "Name": "saa",
+        "Subject": "sab",
+        "Tag": "sac",
+        "Type": "sad",
+        "TypeCode": 174,
+        "id": "BOUNCE00"
+      },
+      "BOUNCE01": {
+        "BouncedAt": "s140",
+        "CanActivate": false,
+        "Content": "s142",
+        "Description": "s143",
+        "Details": "s144",
+        "DumpAvailable": false,
+        "Email": "s146",
+        "ID": "s147",
+        "Inactive": true,
+        "MessageID": "s149",
+        "Name": "s14a",
+        "Subject": "s14b",
+        "Tag": "s14c",
+        "Type": "s14d",
+        "TypeCode": 334,
+        "id": "BOUNCE01"
+      },
+      "BOUNCE02": {
+        "BouncedAt": "s1e0",
+        "CanActivate": false,
+        "Content": "s1e2",
+        "Description": "s1e3",
+        "Details": "s1e4",
+        "DumpAvailable": false,
+        "Email": "s1e6",
+        "ID": "s1e7",
+        "Inactive": true,
+        "MessageID": "s1e9",
+        "Name": "s1ea",
+        "Subject": "s1eb",
+        "Tag": "s1ec",
+        "Type": "s1ed",
+        "TypeCode": 494,
+        "id": "BOUNCE02"
+      }
+    }
+  },
+  "new": {
+    "bounce": {
+      "bounce_ref01": {
+        "BouncedAt": "s280",
+        "CanActivate": false,
+        "Content": "s282",
+        "Description": "s283",
+        "Details": "s284",
+        "DumpAvailable": false,
+        "Email": "s286",
+        "ID": "s287",
+        "Inactive": true,
+        "MessageID": "s289",
+        "Name": "s28a",
+        "Subject": "s28b",
+        "Tag": "s28c",
+        "Type": "s28d",
+        "TypeCode": 654
+      }
+    }
+  },
+  "requests": {
+    "GET /bounces": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "GET /bounces/{bounceid}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "PUT /bounces/{bounceid}/activate": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

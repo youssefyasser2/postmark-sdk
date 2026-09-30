@@ -1,0 +1,367 @@
+# Entity: outbound
+
+main: kit: entity: outbound: {
+
+  alias: field: {}
+
+  fields: {
+    Attachments: {
+      h: "Attachments"
+      n: "Attachments"
+      r: false
+      t: "`$ARRAY`"
+    }
+    Bcc: {
+      h: "Bcc"
+      n: "Bcc"
+      r: false
+      t: "`$ARRAY`"
+    }
+    BounceRate: {
+      h: "Bounce Rate"
+      n: "BounceRate"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Bounced: {
+      h: "Bounced"
+      n: "Bounced"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Cc: {
+      h: "Cc"
+      n: "Cc"
+      r: false
+      t: "`$ARRAY`"
+    }
+    From: {
+      h: "From"
+      n: "From"
+      r: false
+      t: "`$STRING`"
+    }
+    MessageID: {
+      h: "Message Id"
+      n: "MessageID"
+      r: false
+      t: "`$STRING`"
+    }
+    Opens: {
+      h: "Opens"
+      n: "Opens"
+      r: false
+      t: "`$INTEGER`"
+    }
+    ReceivedAt: {
+      fo: "date-time"
+      h: "Received At"
+      n: "ReceivedAt"
+      r: false
+      t: "`$STRING`"
+    }
+    Recipients: {
+      h: "Recipients"
+      n: "Recipients"
+      r: false
+      t: "`$ARRAY`"
+    }
+    SMTPAPIErrors: {
+      h: "Smtpapi Errors"
+      n: "SMTPAPIErrors"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Sent: {
+      h: "Sent"
+      n: "Sent"
+      r: false
+      t: "`$INTEGER`"
+    }
+    SpamComplaints: {
+      h: "Spam Complaints"
+      n: "SpamComplaints"
+      r: false
+      t: "`$INTEGER`"
+    }
+    SpamComplaintsRate: {
+      h: "Spam Complaints Rate"
+      n: "SpamComplaintsRate"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Status: {
+      h: "Status"
+      n: "Status"
+      r: false
+      t: "`$STRING`"
+    }
+    Subject: {
+      h: "Subject"
+      n: "Subject"
+      r: false
+      t: "`$STRING`"
+    }
+    Tag: {
+      h: "Tag"
+      n: "Tag"
+      r: false
+      t: "`$STRING`"
+    }
+    To: {
+      h: "To"
+      n: "To"
+      r: false
+      t: "`$ARRAY`"
+    }
+    TotalClicks: {
+      h: "Total Clicks"
+      n: "TotalClicks"
+      r: false
+      t: "`$INTEGER`"
+    }
+    TotalTrackedLinksSent: {
+      h: "Total Tracked Links Sent"
+      n: "TotalTrackedLinksSent"
+      r: false
+      t: "`$INTEGER`"
+    }
+    TrackLinks: {
+      h: "Track Links"
+      n: "TrackLinks"
+      r: false
+      t: "`$STRING`"
+    }
+    TrackOpens: {
+      h: "Track Opens"
+      n: "TrackOpens"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    Tracked: {
+      h: "Tracked"
+      n: "Tracked"
+      r: false
+      t: "`$INTEGER`"
+    }
+    UniqueLinksClicked: {
+      h: "Unique Links Clicked"
+      n: "UniqueLinksClicked"
+      r: false
+      t: "`$INTEGER`"
+    }
+    UniqueOpens: {
+      h: "Unique Opens"
+      n: "UniqueOpens"
+      r: false
+      t: "`$INTEGER`"
+    }
+    WithClientRecorded: {
+      h: "With Client Recorded"
+      n: "WithClientRecorded"
+      r: false
+      t: "`$INTEGER`"
+    }
+    WithLinkTracking: {
+      h: "With Link Tracking"
+      n: "WithLinkTracking"
+      r: false
+      t: "`$INTEGER`"
+    }
+    WithOpenTracking: {
+      h: "With Open Tracking"
+      n: "WithOpenTracking"
+      r: false
+      t: "`$INTEGER`"
+    }
+    WithPlatformRecorded: {
+      h: "With Platform Recorded"
+      n: "WithPlatformRecorded"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "outbound"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /messages/outbound"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "count"
+                or: "count"
+                r: true
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "fromemail"
+                or: "fromemail"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "offset"
+                or: "offset"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "recipient"
+                or: "recipient"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "status"
+                or: "status"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/messages/outbound"
+          q: {
+            exist: [
+              "count"
+              "fromdate"
+              "fromemail"
+              "offset"
+              "recipient"
+              "status"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "messages"
+            }
+            {
+              lit: "outbound"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Messages`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /stats/outbound"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/stats/outbound"
+          q: {
+            exist: [
+              "fromdate"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "stats"
+            }
+            {
+              lit: "outbound"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

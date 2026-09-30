@@ -1,0 +1,40 @@
+# BasicOutboundFlow
+
+main: kit: flow: BasicOutboundFlow:
+{
+  entity: "outbound",
+  kind: "basic",
+  name: "BasicOutboundFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "outbound_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "outbound_ref01",
+        srcdatavar: "outbound_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-outbound_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicOutboundFlow"
+}

@@ -1,0 +1,210 @@
+# Entity: inbound_message_full_detail
+
+main: kit: entity: inbound_message_full_detail: {
+
+  alias: field: {}
+
+  fields: {
+    Attachments: {
+      h: "Attachments"
+      n: "Attachments"
+      r: false
+      t: "`$ARRAY`"
+    }
+    BlockedReason: {
+      h: "Blocked Reason"
+      n: "BlockedReason"
+      r: false
+      t: "`$STRING`"
+    }
+    Cc: {
+      h: "Cc"
+      n: "Cc"
+      r: false
+      t: "`$STRING`"
+    }
+    CcFull: {
+      h: "Cc Full"
+      n: "CcFull"
+      r: false
+      t: "`$ARRAY`"
+    }
+    Date: {
+      h: "Date"
+      n: "Date"
+      r: false
+      t: "`$STRING`"
+    }
+    From: {
+      h: "From"
+      n: "From"
+      r: false
+      t: "`$STRING`"
+    }
+    FromFull: {
+      h: "From Full"
+      n: "FromFull"
+      r: false
+      t: "`$ANY`"
+    }
+    FromName: {
+      h: "From Name"
+      n: "FromName"
+      r: false
+      t: "`$STRING`"
+    }
+    Headers: {
+      h: "Headers"
+      n: "Headers"
+      r: false
+      t: "`$ARRAY`"
+    }
+    HtmlBody: {
+      h: "Html Body"
+      n: "HtmlBody"
+      r: false
+      t: "`$STRING`"
+    }
+    MailboxHash: {
+      h: "Mailbox Hash"
+      n: "MailboxHash"
+      r: false
+      t: "`$STRING`"
+    }
+    MessageID: {
+      h: "Message Id"
+      n: "MessageID"
+      r: false
+      t: "`$STRING`"
+    }
+    OriginalRecipient: {
+      h: "Original Recipient"
+      n: "OriginalRecipient"
+      r: false
+      t: "`$STRING`"
+    }
+    ReplyTo: {
+      h: "Reply To"
+      n: "ReplyTo"
+      r: false
+      t: "`$STRING`"
+    }
+    Status: {
+      h: "Status"
+      n: "Status"
+      r: false
+      t: "`$STRING`"
+    }
+    Subject: {
+      h: "Subject"
+      n: "Subject"
+      r: false
+      t: "`$STRING`"
+    }
+    Tag: {
+      h: "Tag"
+      n: "Tag"
+      r: false
+      t: "`$STRING`"
+    }
+    TextBody: {
+      h: "Text Body"
+      n: "TextBody"
+      r: false
+      t: "`$STRING`"
+    }
+    To: {
+      h: "To"
+      n: "To"
+      r: false
+      t: "`$STRING`"
+    }
+    ToFull: {
+      h: "To Full"
+      n: "ToFull"
+      r: false
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "inbound_message_full_detail"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /messages/inbound/{messageid}/details"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "messageid"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/messages/inbound/{messageid}/details"
+          q: {
+            exist: [
+              "id"
+              "x_postmark_server_token"
+            ]
+          }
+          r: {
+            param: {
+              messageid: "id"
+            }
+          }
+          s: [
+            {
+              lit: "messages"
+            }
+            {
+              lit: "inbound"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "details"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,40 @@
+# BasicStatsApiFlow
+
+main: kit: flow: BasicStatsApiFlow:
+{
+  entity: "stats_api",
+  kind: "basic",
+  name: "BasicStatsApiFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "stats_api_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "stats_api_ref01",
+        srcdatavar: "stats_api_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-stats_api_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicStatsApiFlow"
+}

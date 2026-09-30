@@ -1,0 +1,39 @@
+{
+  "existing": {
+    "bypass": {
+      "BYPASS00": {
+        "ErrorCode": 20,
+        "Message": "s15",
+        "inbound_id": "INBOUND01",
+        "id": "BYPASS00"
+      },
+      "BYPASS01": {
+        "ErrorCode": 40,
+        "Message": "s29",
+        "inbound_id": "INBOUND01",
+        "id": "BYPASS01"
+      },
+      "BYPASS02": {
+        "ErrorCode": 60,
+        "Message": "s3d",
+        "inbound_id": "INBOUND01",
+        "id": "BYPASS02"
+      }
+    }
+  },
+  "new": {
+    "bypass": {
+      "bypass_ref01": {
+        "ErrorCode": 80,
+        "Message": "s51"
+      }
+    }
+  },
+  "requests": {
+    "PUT /messages/inbound/{messageid}/bypass": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

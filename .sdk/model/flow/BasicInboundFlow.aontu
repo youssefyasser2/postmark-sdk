@@ -1,0 +1,22 @@
+# BasicInboundFlow
+
+main: kit: flow: BasicInboundFlow:
+{
+  entity: "inbound",
+  kind: "basic",
+  name: "BasicInboundFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "inbound_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicInboundFlow"
+}

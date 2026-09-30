@@ -1,0 +1,94 @@
+# Entity: bypass
+
+main: kit: entity: bypass: {
+
+  alias: field: {}
+
+  fields: {
+    ErrorCode: {
+      h: "Error Code"
+      n: "ErrorCode"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Message: {
+      h: "Message"
+      n: "Message"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "bypass"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /messages/inbound/{messageid}/bypass"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            params: [
+              {
+                k: "param"
+                n: "inbound_id"
+                or: "messageid"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/messages/inbound/{messageid}/bypass"
+          q: {
+            exist: [
+              "inbound_id"
+              "x_postmark_server_token"
+            ]
+          }
+          r: {
+            param: {
+              messageid: "inbound_id"
+            }
+          }
+          s: [
+            {
+              lit: "messages"
+            }
+            {
+              lit: "inbound"
+            }
+            {
+              var: "inbound_id"
+            }
+            {
+              lit: "bypass"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.inbound")]
+  ]
+
+}

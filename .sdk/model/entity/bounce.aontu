@@ -1,0 +1,350 @@
+# Entity: bounce
+
+main: kit: entity: bounce: {
+
+  alias: field: {}
+
+  fields: {
+    BouncedAt: {
+      fo: "date-time"
+      h: "Bounced At"
+      n: "BouncedAt"
+      r: false
+      t: "`$STRING`"
+    }
+    CanActivate: {
+      h: "Can Activate"
+      n: "CanActivate"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    Content: {
+      h: "Content"
+      n: "Content"
+      r: false
+      t: "`$STRING`"
+    }
+    Description: {
+      h: "Description"
+      n: "Description"
+      r: false
+      t: "`$STRING`"
+    }
+    Details: {
+      h: "Details"
+      n: "Details"
+      r: false
+      t: "`$STRING`"
+    }
+    DumpAvailable: {
+      h: "Dump Available"
+      n: "DumpAvailable"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    Email: {
+      fo: "email"
+      h: "Email"
+      n: "Email"
+      r: false
+      t: "`$STRING`"
+    }
+    ID: {
+      h: "Id"
+      n: "ID"
+      r: false
+      t: "`$STRING`"
+    }
+    Inactive: {
+      h: "Inactive"
+      n: "Inactive"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    MessageID: {
+      h: "Message Id"
+      n: "MessageID"
+      r: false
+      t: "`$STRING`"
+    }
+    Name: {
+      h: "Name"
+      n: "Name"
+      r: false
+      t: "`$STRING`"
+    }
+    Subject: {
+      h: "Subject"
+      n: "Subject"
+      r: false
+      t: "`$STRING`"
+    }
+    Tag: {
+      h: "Tag"
+      n: "Tag"
+      r: false
+      t: "`$STRING`"
+    }
+    Type: {
+      h: "Type"
+      n: "Type"
+      r: false
+      t: "`$STRING`"
+    }
+    TypeCode: {
+      h: "Type Code"
+      n: "TypeCode"
+      r: false
+      t: "`$INTEGER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "bounce"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /bounces"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "count"
+                or: "count"
+                r: true
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "email_filter"
+                or: "emailFilter"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "inactive"
+                or: "inactive"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "message_id"
+                or: "messageID"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "offset"
+                or: "offset"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "type"
+                or: "type"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/bounces"
+          q: {
+            exist: [
+              "count"
+              "email_filter"
+              "fromdate"
+              "inactive"
+              "message_id"
+              "offset"
+              "tag"
+              "todate"
+              "type"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "bounces"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Bounces`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /bounces/{bounceid}"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "bounceid"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/bounces/{bounceid}"
+          q: {
+            exist: [
+              "id"
+              "x_postmark_server_token"
+            ]
+          }
+          r: {
+            param: {
+              bounceid: "id"
+            }
+          }
+          s: [
+            {
+              lit: "bounces"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /bounces/{bounceid}/activate"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "bounceid"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/bounces/{bounceid}/activate"
+          q: {
+            "$action": "activate"
+            exist: [
+              "id"
+              "x_postmark_server_token"
+            ]
+          }
+          r: {
+            param: {
+              bounceid: "id"
+            }
+          }
+          s: [
+            {
+              lit: "bounces"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "activate"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Bounce`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

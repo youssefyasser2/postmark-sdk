@@ -1,0 +1,212 @@
+# Entity: inboundrule
+
+main: kit: entity: inboundrule: {
+
+  alias: field: {}
+
+  fields: {
+    ID: {
+      h: "Id"
+      n: "ID"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Rule: {
+      fo: "email"
+      h: "Rule"
+      n: "Rule"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "inboundrule"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /triggers/inboundrules"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "body"
+                or: "body"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/triggers/inboundrules"
+          q: {
+            exist: [
+              "body"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "triggers"
+            }
+            {
+              lit: "inboundrules"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /triggers/inboundrules"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "count"
+                or: "count"
+                r: true
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "offset"
+                or: "offset"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/triggers/inboundrules"
+          q: {
+            exist: [
+              "count"
+              "offset"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "triggers"
+            }
+            {
+              lit: "inboundrules"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.InboundRules`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /triggers/inboundrules/{triggerid}"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "triggerid"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/triggers/inboundrules/{triggerid}"
+          q: {
+            exist: [
+              "id"
+              "x_postmark_server_token"
+            ]
+          }
+          r: {
+            param: {
+              triggerid: "id"
+            }
+          }
+          s: [
+            {
+              lit: "triggers"
+            }
+            {
+              lit: "inboundrules"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

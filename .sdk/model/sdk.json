@@ -1,0 +1,6329 @@
+{
+  "NAME": "POSTMARK",
+  "Name": "Postmark",
+  "def": "server.yml",
+  "main": {
+    "api": {
+      "entity": {},
+      "guide": {}
+    },
+    "custom": {
+      "plurals": {}
+    },
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "",
+        "url": ""
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "github-pages": {
+            "active": false,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "github-pages",
+            "name": "github-pages",
+            "origname": "",
+            "output": {
+              "path": "docs"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          },
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "bounce": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "BouncedAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Bounced At",
+              "n": "BouncedAt",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "CanActivate": {
+              "a": true,
+              "h": "Can Activate",
+              "n": "CanActivate",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "Content": {
+              "a": true,
+              "h": "Content",
+              "n": "Content",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Description": {
+              "a": true,
+              "h": "Description",
+              "n": "Description",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Details": {
+              "a": true,
+              "h": "Details",
+              "n": "Details",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "DumpAvailable": {
+              "a": true,
+              "h": "Dump Available",
+              "n": "DumpAvailable",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "Email": {
+              "a": true,
+              "fo": "email",
+              "h": "Email",
+              "n": "Email",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ID": {
+              "a": true,
+              "h": "Id",
+              "n": "ID",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Inactive": {
+              "a": true,
+              "h": "Inactive",
+              "n": "Inactive",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "MessageID": {
+              "a": true,
+              "h": "Message Id",
+              "n": "MessageID",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Name": {
+              "a": true,
+              "h": "Name",
+              "n": "Name",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Subject": {
+              "a": true,
+              "h": "Subject",
+              "n": "Subject",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Tag": {
+              "a": true,
+              "h": "Tag",
+              "n": "Tag",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Type": {
+              "a": true,
+              "h": "Type",
+              "n": "Type",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "TypeCode": {
+              "a": true,
+              "h": "Type Code",
+              "n": "TypeCode",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "bounce",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /bounces",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "count",
+                        "or": "count",
+                        "r": true,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "email_filter",
+                        "or": "emailFilter",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "inactive",
+                        "or": "inactive",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "message_id",
+                        "or": "messageID",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "type",
+                        "or": "type",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/bounces",
+                  "q": {
+                    "exist": [
+                      "count",
+                      "email_filter",
+                      "fromdate",
+                      "inactive",
+                      "message_id",
+                      "offset",
+                      "tag",
+                      "todate",
+                      "type",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "bounces"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Bounces`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /bounces/{bounceid}",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "bounceid",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/bounces/{bounceid}",
+                  "q": {
+                    "exist": [
+                      "id",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "bounceid": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "bounces"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PUT /bounces/{bounceid}/activate",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "bounceid",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PUT",
+                  "o": "/bounces/{bounceid}/activate",
+                  "q": {
+                    "$action": "activate",
+                    "exist": [
+                      "id",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "bounceid": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "bounces"
+                    },
+                    {
+                      "var": "id"
+                    },
+                    {
+                      "lit": "activate"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Bounce`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "bounce_dump": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "Body": {
+              "a": true,
+              "h": "Body",
+              "n": "Body",
+              "r": false,
+              "sh": "Raw source of bounce.",
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "bounce_dump",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /bounces/{bounceid}/dump",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "bounceid",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/bounces/{bounceid}/dump",
+                  "q": {
+                    "exist": [
+                      "id",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "bounceid": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "bounces"
+                    },
+                    {
+                      "var": "id"
+                    },
+                    {
+                      "lit": "dump"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "bypass": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "ErrorCode": {
+              "a": true,
+              "h": "Error Code",
+              "n": "ErrorCode",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Message": {
+              "a": true,
+              "h": "Message",
+              "n": "Message",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "bypass",
+          "op": {
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PUT /messages/inbound/{messageid}/bypass",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "inbound_id",
+                        "or": "messageid",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PUT",
+                  "o": "/messages/inbound/{messageid}/bypass",
+                  "q": {
+                    "exist": [
+                      "inbound_id",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "messageid": "inbound_id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "messages"
+                    },
+                    {
+                      "lit": "inbound"
+                    },
+                    {
+                      "var": "inbound_id"
+                    },
+                    {
+                      "lit": "bypass"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": [
+              [
+                "$.main.kit.entity.inbound"
+              ]
+            ]
+          }
+        },
+        "delivery_stat": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "Count": {
+              "a": true,
+              "h": "Count",
+              "n": "Count",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Name": {
+              "a": true,
+              "h": "Name",
+              "n": "Name",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Type": {
+              "a": true,
+              "h": "Type",
+              "n": "Type",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "delivery_stat",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /deliverystats",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/deliverystats",
+                  "q": {
+                    "exist": [
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "deliverystats"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Bounces`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "dynamic": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {},
+          "name": "dynamic",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /stats/outbound/clicks",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats/outbound/clicks",
+                  "q": {
+                    "exist": [
+                      "fromdate",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "stats"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "clicks"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /stats/outbound/clicks/location",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats/outbound/clicks/location",
+                  "q": {
+                    "exist": [
+                      "fromdate",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "stats"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "clicks"
+                    },
+                    {
+                      "lit": "location"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /stats/outbound/clicks/platforms",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats/outbound/clicks/platforms",
+                  "q": {
+                    "exist": [
+                      "fromdate",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "stats"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "clicks"
+                    },
+                    {
+                      "lit": "platforms"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "inbound": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "Attachments": {
+              "a": true,
+              "h": "Attachments",
+              "n": "Attachments",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "Cc": {
+              "a": true,
+              "h": "Cc",
+              "n": "Cc",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "CcFull": {
+              "a": true,
+              "h": "Cc Full",
+              "n": "CcFull",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "Date": {
+              "a": true,
+              "h": "Date",
+              "n": "Date",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "From": {
+              "a": true,
+              "h": "From",
+              "n": "From",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "FromFull": {
+              "a": true,
+              "h": "From Full",
+              "n": "FromFull",
+              "r": false,
+              "t": "`$ANY`"
+            },
+            "FromName": {
+              "a": true,
+              "h": "From Name",
+              "n": "FromName",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "MailboxHash": {
+              "a": true,
+              "h": "Mailbox Hash",
+              "n": "MailboxHash",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "MessageID": {
+              "a": true,
+              "h": "Message Id",
+              "n": "MessageID",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "OriginalRecipient": {
+              "a": true,
+              "h": "Original Recipient",
+              "n": "OriginalRecipient",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ReplyTo": {
+              "a": true,
+              "h": "Reply To",
+              "n": "ReplyTo",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Status": {
+              "a": true,
+              "h": "Status",
+              "n": "Status",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Subject": {
+              "a": true,
+              "h": "Subject",
+              "n": "Subject",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Tag": {
+              "a": true,
+              "h": "Tag",
+              "n": "Tag",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "To": {
+              "a": true,
+              "h": "To",
+              "n": "To",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ToFull": {
+              "a": true,
+              "h": "To Full",
+              "n": "ToFull",
+              "r": false,
+              "t": "`$ARRAY`"
+            }
+          },
+          "name": "inbound",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /messages/inbound",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "count",
+                        "or": "count",
+                        "r": true,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromemail",
+                        "or": "fromemail",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "mailboxhash",
+                        "or": "mailboxhash",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "recipient",
+                        "or": "recipient",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "status",
+                        "or": "status",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "subject",
+                        "or": "subject",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/messages/inbound",
+                  "q": {
+                    "exist": [
+                      "count",
+                      "fromdate",
+                      "fromemail",
+                      "mailboxhash",
+                      "offset",
+                      "recipient",
+                      "status",
+                      "subject",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "messages"
+                    },
+                    {
+                      "lit": "inbound"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.InboundMessages`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "inbound_message_full_detail": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "Attachments": {
+              "a": true,
+              "h": "Attachments",
+              "n": "Attachments",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "BlockedReason": {
+              "a": true,
+              "h": "Blocked Reason",
+              "n": "BlockedReason",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Cc": {
+              "a": true,
+              "h": "Cc",
+              "n": "Cc",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "CcFull": {
+              "a": true,
+              "h": "Cc Full",
+              "n": "CcFull",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "Date": {
+              "a": true,
+              "h": "Date",
+              "n": "Date",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "From": {
+              "a": true,
+              "h": "From",
+              "n": "From",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "FromFull": {
+              "a": true,
+              "h": "From Full",
+              "n": "FromFull",
+              "r": false,
+              "t": "`$ANY`"
+            },
+            "FromName": {
+              "a": true,
+              "h": "From Name",
+              "n": "FromName",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Headers": {
+              "a": true,
+              "h": "Headers",
+              "n": "Headers",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "HtmlBody": {
+              "a": true,
+              "h": "Html Body",
+              "n": "HtmlBody",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "MailboxHash": {
+              "a": true,
+              "h": "Mailbox Hash",
+              "n": "MailboxHash",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "MessageID": {
+              "a": true,
+              "h": "Message Id",
+              "n": "MessageID",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "OriginalRecipient": {
+              "a": true,
+              "h": "Original Recipient",
+              "n": "OriginalRecipient",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ReplyTo": {
+              "a": true,
+              "h": "Reply To",
+              "n": "ReplyTo",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Status": {
+              "a": true,
+              "h": "Status",
+              "n": "Status",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Subject": {
+              "a": true,
+              "h": "Subject",
+              "n": "Subject",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Tag": {
+              "a": true,
+              "h": "Tag",
+              "n": "Tag",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "TextBody": {
+              "a": true,
+              "h": "Text Body",
+              "n": "TextBody",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "To": {
+              "a": true,
+              "h": "To",
+              "n": "To",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ToFull": {
+              "a": true,
+              "h": "To Full",
+              "n": "ToFull",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "inbound_message_full_detail",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /messages/inbound/{messageid}/details",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "messageid",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/messages/inbound/{messageid}/details",
+                  "q": {
+                    "exist": [
+                      "id",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "messageid": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "messages"
+                    },
+                    {
+                      "lit": "inbound"
+                    },
+                    {
+                      "var": "id"
+                    },
+                    {
+                      "lit": "details"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "inboundrule": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "ID": {
+              "a": true,
+              "h": "Id",
+              "n": "ID",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Rule": {
+              "a": true,
+              "fo": "email",
+              "h": "Rule",
+              "n": "Rule",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "inboundrule",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "POST /triggers/inboundrules",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "body",
+                        "or": "body",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/triggers/inboundrules",
+                  "q": {
+                    "exist": [
+                      "body",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "triggers"
+                    },
+                    {
+                      "lit": "inboundrules"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /triggers/inboundrules",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "count",
+                        "or": "count",
+                        "r": true,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/triggers/inboundrules",
+                  "q": {
+                    "exist": [
+                      "count",
+                      "offset",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "triggers"
+                    },
+                    {
+                      "lit": "inboundrules"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.InboundRules`"
+                  }
+                }
+              ]
+            },
+            "remove": {
+              "input": "data",
+              "name": "remove",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "DELETE /triggers/inboundrules/{triggerid}",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "triggerid",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "DELETE",
+                  "o": "/triggers/inboundrules/{triggerid}",
+                  "q": {
+                    "exist": [
+                      "id",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "triggerid": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "triggers"
+                    },
+                    {
+                      "lit": "inboundrules"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "message_click_search": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "ClickLocation": {
+              "a": true,
+              "h": "Click Location",
+              "n": "ClickLocation",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Clicks": {
+              "a": true,
+              "h": "Clicks",
+              "n": "Clicks",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "Client": {
+              "a": true,
+              "h": "Client",
+              "n": "Client",
+              "r": false,
+              "t": "`$ANY`"
+            },
+            "Geo": {
+              "a": true,
+              "h": "Geo",
+              "n": "Geo",
+              "r": false,
+              "t": "`$ANY`"
+            },
+            "MessageID": {
+              "a": true,
+              "h": "Message Id",
+              "n": "MessageID",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "OS": {
+              "a": true,
+              "h": "Os",
+              "n": "OS",
+              "r": false,
+              "t": "`$ANY`"
+            },
+            "OriginalLink": {
+              "a": true,
+              "h": "Original Link",
+              "n": "OriginalLink",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Platform": {
+              "a": true,
+              "h": "Platform",
+              "n": "Platform",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ReceivedAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Received At",
+              "n": "ReceivedAt",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Recipient": {
+              "a": true,
+              "fo": "email",
+              "h": "Recipient",
+              "n": "Recipient",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Tag": {
+              "a": true,
+              "h": "Tag",
+              "n": "Tag",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "TotalCount": {
+              "a": true,
+              "h": "Total Count",
+              "n": "TotalCount",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "UserAgent": {
+              "a": true,
+              "h": "User Agent",
+              "n": "UserAgent",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "message_click_search",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /messages/outbound/clicks",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "city",
+                        "or": "city",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "client_company",
+                        "or": "client_company",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "client_family",
+                        "or": "client_family",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "client_name",
+                        "or": "client_name",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "count",
+                        "or": "count",
+                        "r": true,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "country",
+                        "or": "country",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "os_company",
+                        "or": "os_company",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "os_family",
+                        "or": "os_family",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "os_name",
+                        "or": "os_name",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "platform",
+                        "or": "platform",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "recipient",
+                        "or": "recipient",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "region",
+                        "or": "region",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/messages/outbound/clicks",
+                  "q": {
+                    "exist": [
+                      "city",
+                      "client_company",
+                      "client_family",
+                      "client_name",
+                      "count",
+                      "country",
+                      "offset",
+                      "os_company",
+                      "os_family",
+                      "os_name",
+                      "platform",
+                      "recipient",
+                      "region",
+                      "tag",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "messages"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "clicks"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Clicks`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /messages/outbound/clicks/{messageid}",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "messageid",
+                        "or": "messageid",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "count",
+                        "or": "count",
+                        "r": true,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/messages/outbound/clicks/{messageid}",
+                  "q": {
+                    "exist": [
+                      "count",
+                      "messageid",
+                      "offset",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "messages"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "clicks"
+                    },
+                    {
+                      "var": "messageid"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "message_open_search": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "Client": {
+              "a": true,
+              "h": "Client",
+              "n": "Client",
+              "r": false,
+              "t": "`$ANY`"
+            },
+            "FirstOpen": {
+              "a": true,
+              "h": "First Open",
+              "n": "FirstOpen",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "Geo": {
+              "a": true,
+              "h": "Geo",
+              "n": "Geo",
+              "r": false,
+              "t": "`$ANY`"
+            },
+            "MessageID": {
+              "a": true,
+              "h": "Message Id",
+              "n": "MessageID",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "OS": {
+              "a": true,
+              "h": "Os",
+              "n": "OS",
+              "r": false,
+              "t": "`$ANY`"
+            },
+            "Opens": {
+              "a": true,
+              "h": "Opens",
+              "n": "Opens",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "Platform": {
+              "a": true,
+              "h": "Platform",
+              "n": "Platform",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ReceivedAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Received At",
+              "n": "ReceivedAt",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Recipient": {
+              "a": true,
+              "fo": "email",
+              "h": "Recipient",
+              "n": "Recipient",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Tag": {
+              "a": true,
+              "h": "Tag",
+              "n": "Tag",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "TotalCount": {
+              "a": true,
+              "h": "Total Count",
+              "n": "TotalCount",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "UserAgent": {
+              "a": true,
+              "h": "User Agent",
+              "n": "UserAgent",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "message_open_search",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /messages/outbound/opens",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "city",
+                        "or": "city",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "client_company",
+                        "or": "client_company",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "client_family",
+                        "or": "client_family",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "client_name",
+                        "or": "client_name",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "count",
+                        "or": "count",
+                        "r": true,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "country",
+                        "or": "country",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "os_company",
+                        "or": "os_company",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "os_family",
+                        "or": "os_family",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "os_name",
+                        "or": "os_name",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "platform",
+                        "or": "platform",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "recipient",
+                        "or": "recipient",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "region",
+                        "or": "region",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/messages/outbound/opens",
+                  "q": {
+                    "exist": [
+                      "city",
+                      "client_company",
+                      "client_family",
+                      "client_name",
+                      "count",
+                      "country",
+                      "offset",
+                      "os_company",
+                      "os_family",
+                      "os_name",
+                      "platform",
+                      "recipient",
+                      "region",
+                      "tag",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "messages"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "opens"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Opens`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /messages/outbound/opens/{messageid}",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "messageid",
+                        "or": "messageid",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "count",
+                        "or": "count",
+                        "r": true,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/messages/outbound/opens/{messageid}",
+                  "q": {
+                    "exist": [
+                      "count",
+                      "messageid",
+                      "offset",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "messages"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "opens"
+                    },
+                    {
+                      "var": "messageid"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "outbound": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "Attachments": {
+              "a": true,
+              "h": "Attachments",
+              "n": "Attachments",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "Bcc": {
+              "a": true,
+              "h": "Bcc",
+              "n": "Bcc",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "BounceRate": {
+              "a": true,
+              "h": "Bounce Rate",
+              "n": "BounceRate",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Bounced": {
+              "a": true,
+              "h": "Bounced",
+              "n": "Bounced",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Cc": {
+              "a": true,
+              "h": "Cc",
+              "n": "Cc",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "From": {
+              "a": true,
+              "h": "From",
+              "n": "From",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "MessageID": {
+              "a": true,
+              "h": "Message Id",
+              "n": "MessageID",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Opens": {
+              "a": true,
+              "h": "Opens",
+              "n": "Opens",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "ReceivedAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Received At",
+              "n": "ReceivedAt",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Recipients": {
+              "a": true,
+              "h": "Recipients",
+              "n": "Recipients",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "SMTPAPIErrors": {
+              "a": true,
+              "h": "Smtpapi Errors",
+              "n": "SMTPAPIErrors",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Sent": {
+              "a": true,
+              "h": "Sent",
+              "n": "Sent",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "SpamComplaints": {
+              "a": true,
+              "h": "Spam Complaints",
+              "n": "SpamComplaints",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "SpamComplaintsRate": {
+              "a": true,
+              "h": "Spam Complaints Rate",
+              "n": "SpamComplaintsRate",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Status": {
+              "a": true,
+              "h": "Status",
+              "n": "Status",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Subject": {
+              "a": true,
+              "h": "Subject",
+              "n": "Subject",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Tag": {
+              "a": true,
+              "h": "Tag",
+              "n": "Tag",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "To": {
+              "a": true,
+              "h": "To",
+              "n": "To",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "TotalClicks": {
+              "a": true,
+              "h": "Total Clicks",
+              "n": "TotalClicks",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "TotalTrackedLinksSent": {
+              "a": true,
+              "h": "Total Tracked Links Sent",
+              "n": "TotalTrackedLinksSent",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "TrackLinks": {
+              "a": true,
+              "h": "Track Links",
+              "n": "TrackLinks",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "TrackOpens": {
+              "a": true,
+              "h": "Track Opens",
+              "n": "TrackOpens",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "Tracked": {
+              "a": true,
+              "h": "Tracked",
+              "n": "Tracked",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "UniqueLinksClicked": {
+              "a": true,
+              "h": "Unique Links Clicked",
+              "n": "UniqueLinksClicked",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "UniqueOpens": {
+              "a": true,
+              "h": "Unique Opens",
+              "n": "UniqueOpens",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "WithClientRecorded": {
+              "a": true,
+              "h": "With Client Recorded",
+              "n": "WithClientRecorded",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "WithLinkTracking": {
+              "a": true,
+              "h": "With Link Tracking",
+              "n": "WithLinkTracking",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "WithOpenTracking": {
+              "a": true,
+              "h": "With Open Tracking",
+              "n": "WithOpenTracking",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "WithPlatformRecorded": {
+              "a": true,
+              "h": "With Platform Recorded",
+              "n": "WithPlatformRecorded",
+              "r": false,
+              "t": "`$INTEGER`"
+            }
+          },
+          "name": "outbound",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /messages/outbound",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "count",
+                        "or": "count",
+                        "r": true,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromemail",
+                        "or": "fromemail",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "recipient",
+                        "or": "recipient",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "status",
+                        "or": "status",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/messages/outbound",
+                  "q": {
+                    "exist": [
+                      "count",
+                      "fromdate",
+                      "fromemail",
+                      "offset",
+                      "recipient",
+                      "status",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "messages"
+                    },
+                    {
+                      "lit": "outbound"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Messages`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /stats/outbound",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats/outbound",
+                  "q": {
+                    "exist": [
+                      "fromdate",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "stats"
+                    },
+                    {
+                      "lit": "outbound"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "outbound_message_detail": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "Attachments": {
+              "a": true,
+              "h": "Attachments",
+              "n": "Attachments",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "Bcc": {
+              "a": true,
+              "h": "Bcc",
+              "n": "Bcc",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "Body": {
+              "a": true,
+              "h": "Body",
+              "n": "Body",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Cc": {
+              "a": true,
+              "h": "Cc",
+              "n": "Cc",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "From": {
+              "a": true,
+              "h": "From",
+              "n": "From",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "HtmlBody": {
+              "a": true,
+              "h": "Html Body",
+              "n": "HtmlBody",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "MessageEvents": {
+              "a": true,
+              "h": "Message Events",
+              "n": "MessageEvents",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "MessageID": {
+              "a": true,
+              "h": "Message Id",
+              "n": "MessageID",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ReceivedAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Received At",
+              "n": "ReceivedAt",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Recipients": {
+              "a": true,
+              "h": "Recipients",
+              "n": "Recipients",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "Status": {
+              "a": true,
+              "h": "Status",
+              "n": "Status",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Subject": {
+              "a": true,
+              "h": "Subject",
+              "n": "Subject",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Tag": {
+              "a": true,
+              "h": "Tag",
+              "n": "Tag",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "TextBody": {
+              "a": true,
+              "h": "Text Body",
+              "n": "TextBody",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "To": {
+              "a": true,
+              "h": "To",
+              "n": "To",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "TrackLinks": {
+              "a": true,
+              "h": "Track Links",
+              "n": "TrackLinks",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "TrackOpens": {
+              "a": true,
+              "h": "Track Opens",
+              "n": "TrackOpens",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "outbound_message_detail",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /messages/outbound/{messageid}/details",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "messageid",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/messages/outbound/{messageid}/details",
+                  "q": {
+                    "exist": [
+                      "id",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "messageid": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "messages"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "var": "id"
+                    },
+                    {
+                      "lit": "details"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "outbound_message_dump": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "Body": {
+              "a": true,
+              "h": "Body",
+              "n": "Body",
+              "r": false,
+              "sh": "Raw source of message.",
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "outbound_message_dump",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /messages/outbound/{messageid}/dump",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "messageid",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/messages/outbound/{messageid}/dump",
+                  "q": {
+                    "exist": [
+                      "id",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "messageid": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "messages"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "var": "id"
+                    },
+                    {
+                      "lit": "dump"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "retry": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "ErrorCode": {
+              "a": true,
+              "h": "Error Code",
+              "n": "ErrorCode",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Message": {
+              "a": true,
+              "h": "Message",
+              "n": "Message",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "retry",
+          "op": {
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PUT /messages/inbound/{messageid}/retry",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "inbound_id",
+                        "or": "messageid",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PUT",
+                  "o": "/messages/inbound/{messageid}/retry",
+                  "q": {
+                    "exist": [
+                      "inbound_id",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "messageid": "inbound_id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "messages"
+                    },
+                    {
+                      "lit": "inbound"
+                    },
+                    {
+                      "var": "inbound_id"
+                    },
+                    {
+                      "lit": "retry"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": [
+              [
+                "$.main.kit.entity.inbound"
+              ]
+            ]
+          }
+        },
+        "send_email": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "ErrorCode": {
+              "a": true,
+              "h": "Error Code",
+              "n": "ErrorCode",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Message": {
+              "a": true,
+              "h": "Message",
+              "n": "Message",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "MessageID": {
+              "a": true,
+              "h": "Message Id",
+              "n": "MessageID",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "SubmittedAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Submitted At",
+              "n": "SubmittedAt",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "To": {
+              "a": true,
+              "h": "To",
+              "n": "To",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "send_email",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "POST /email",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "body",
+                        "or": "body",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/email",
+                  "q": {
+                    "exist": [
+                      "body",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "email"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata.body`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "POST /email/withTemplate",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "body",
+                        "or": "body",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/email/withTemplate",
+                  "q": {
+                    "exist": [
+                      "body",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "email"
+                    },
+                    {
+                      "lit": "withTemplate"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata.body`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "send_email_batch": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "ErrorCode": {
+              "a": true,
+              "h": "Error Code",
+              "n": "ErrorCode",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Message": {
+              "a": true,
+              "h": "Message",
+              "n": "Message",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "MessageID": {
+              "a": true,
+              "h": "Message Id",
+              "n": "MessageID",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "SubmittedAt": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Submitted At",
+              "n": "SubmittedAt",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "To": {
+              "a": true,
+              "h": "To",
+              "n": "To",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "send_email_batch",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "POST /email/batch",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "body",
+                        "or": "body",
+                        "r": false,
+                        "t": "`$ARRAY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/email/batch",
+                  "q": {
+                    "exist": [
+                      "body",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "email"
+                    },
+                    {
+                      "lit": "batch"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata.body`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "POST /email/batchWithTemplates",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "body",
+                        "or": "body",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/email/batchWithTemplates",
+                  "q": {
+                    "exist": [
+                      "body",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "email"
+                    },
+                    {
+                      "lit": "batchWithTemplates"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata.body`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "sent_count": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "Date": {
+              "a": true,
+              "h": "Date",
+              "n": "Date",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Sent": {
+              "a": true,
+              "h": "Sent",
+              "n": "Sent",
+              "r": false,
+              "t": "`$INTEGER`"
+            }
+          },
+          "name": "sent_count",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /stats/outbound/sends",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats/outbound/sends",
+                  "q": {
+                    "exist": [
+                      "fromdate",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "stats"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "sends"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Days`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "server": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "ApiTokens": {
+              "a": true,
+              "h": "Api Tokens",
+              "n": "ApiTokens",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "BounceHookUrl": {
+              "a": true,
+              "h": "Bounce Hook Url",
+              "n": "BounceHookUrl",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ClickHookUrl": {
+              "a": true,
+              "h": "Click Hook Url",
+              "n": "ClickHookUrl",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Color": {
+              "a": true,
+              "h": "Color",
+              "n": "Color",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "DeliveryHookUrl": {
+              "a": true,
+              "h": "Delivery Hook Url",
+              "n": "DeliveryHookUrl",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ID": {
+              "a": true,
+              "h": "Id",
+              "n": "ID",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "InboundAddress": {
+              "a": true,
+              "fo": "email",
+              "h": "Inbound Address",
+              "n": "InboundAddress",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "InboundDomain": {
+              "a": true,
+              "h": "Inbound Domain",
+              "n": "InboundDomain",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "InboundHash": {
+              "a": true,
+              "h": "Inbound Hash",
+              "n": "InboundHash",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "InboundHookUrl": {
+              "a": true,
+              "h": "Inbound Hook Url",
+              "n": "InboundHookUrl",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "InboundSpamThreshold": {
+              "a": true,
+              "h": "Inbound Spam Threshold",
+              "n": "InboundSpamThreshold",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Name": {
+              "a": true,
+              "h": "Name",
+              "n": "Name",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "OpenHookUrl": {
+              "a": true,
+              "h": "Open Hook Url",
+              "n": "OpenHookUrl",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "PostFirstOpenOnly": {
+              "a": true,
+              "h": "Post First Open Only",
+              "n": "PostFirstOpenOnly",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "RawEmailEnabled": {
+              "a": true,
+              "h": "Raw Email Enabled",
+              "n": "RawEmailEnabled",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "ServerLink": {
+              "a": true,
+              "h": "Server Link",
+              "n": "ServerLink",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "SmtpApiActivated": {
+              "a": true,
+              "h": "Smtp Api Activated",
+              "n": "SmtpApiActivated",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "TrackLinks": {
+              "a": true,
+              "h": "Track Links",
+              "n": "TrackLinks",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "TrackOpens": {
+              "a": true,
+              "h": "Track Opens",
+              "n": "TrackOpens",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            }
+          },
+          "name": "server",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /server",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/server",
+                  "q": {
+                    "exist": [
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "server"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.ApiTokens`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PUT /server",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "body",
+                        "or": "body",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PUT",
+                  "o": "/server",
+                  "q": {
+                    "exist": [
+                      "body",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "server"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "stats_api": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "Date": {
+              "a": true,
+              "h": "Date",
+              "n": "Date",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "Days": {
+              "a": true,
+              "h": "Days",
+              "n": "Days",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "Desktop": {
+              "a": true,
+              "h": "Desktop",
+              "n": "Desktop",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "HardBounce": {
+              "a": true,
+              "h": "Hard Bounce",
+              "n": "HardBounce",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Mobile": {
+              "a": true,
+              "h": "Mobile",
+              "n": "Mobile",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Opens": {
+              "a": true,
+              "h": "Opens",
+              "n": "Opens",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "SMTPApiError": {
+              "a": true,
+              "h": "Smtp Api Error",
+              "n": "SMTPApiError",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "SoftBounce": {
+              "a": true,
+              "h": "Soft Bounce",
+              "n": "SoftBounce",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "SpamComplaint": {
+              "a": true,
+              "h": "Spam Complaint",
+              "n": "SpamComplaint",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Tracked": {
+              "a": true,
+              "h": "Tracked",
+              "n": "Tracked",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Transient": {
+              "a": true,
+              "h": "Transient",
+              "n": "Transient",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Unique": {
+              "a": true,
+              "h": "Unique",
+              "n": "Unique",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "Unknown": {
+              "a": true,
+              "h": "Unknown",
+              "n": "Unknown",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "WebMail": {
+              "a": true,
+              "h": "Web Mail",
+              "n": "WebMail",
+              "r": false,
+              "t": "`$INTEGER`"
+            }
+          },
+          "name": "stats_api",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /stats/outbound/bounces",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats/outbound/bounces",
+                  "q": {
+                    "exist": [
+                      "fromdate",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "stats"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "bounces"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Days`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /stats/outbound/opens",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats/outbound/opens",
+                  "q": {
+                    "exist": [
+                      "fromdate",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "stats"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "opens"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Days`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /stats/outbound/opens/emailclients",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats/outbound/opens/emailclients",
+                  "q": {
+                    "exist": [
+                      "fromdate",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "stats"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "opens"
+                    },
+                    {
+                      "lit": "emailclients"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Days`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /stats/outbound/opens/platforms",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats/outbound/opens/platforms",
+                  "q": {
+                    "exist": [
+                      "fromdate",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "stats"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "opens"
+                    },
+                    {
+                      "lit": "platforms"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Days`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /stats/outbound/spam",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats/outbound/spam",
+                  "q": {
+                    "exist": [
+                      "fromdate",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "stats"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "spam"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Days`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /stats/outbound/tracked",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats/outbound/tracked",
+                  "q": {
+                    "exist": [
+                      "fromdate",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "stats"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "tracked"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Days`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /stats/outbound/clicks/browserfamilies",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "fromdate",
+                        "or": "fromdate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "tag",
+                        "or": "tag",
+                        "r": false,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "todate",
+                        "or": "todate",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/stats/outbound/clicks/browserfamilies",
+                  "q": {
+                    "exist": [
+                      "fromdate",
+                      "tag",
+                      "todate",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "stats"
+                    },
+                    {
+                      "lit": "outbound"
+                    },
+                    {
+                      "lit": "clicks"
+                    },
+                    {
+                      "lit": "browserfamilies"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "template": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "Active": {
+              "a": true,
+              "h": "Active",
+              "n": "Active",
+              "r": false,
+              "sh": "Indicates that this template may be used for sending email.",
+              "t": "`$BOOLEAN`"
+            },
+            "Alias": {
+              "a": true,
+              "h": "Alias",
+              "n": "Alias",
+              "r": false,
+              "sh": "The user-supplied alias for this template.",
+              "t": "`$STRING`"
+            },
+            "AssociatedServerId": {
+              "a": true,
+              "h": "Associated Server Id",
+              "n": "AssociatedServerId",
+              "r": false,
+              "sh": "The ID of the Server with which this template is associated.",
+              "t": "`$INTEGER`"
+            },
+            "HtmlBody": {
+              "a": true,
+              "h": "Html Body",
+              "n": "HtmlBody",
+              "r": false,
+              "sh": "The content to use for the HtmlBody when this template is used to send email.",
+              "t": "`$STRING`"
+            },
+            "Name": {
+              "a": true,
+              "h": "Name",
+              "n": "Name",
+              "r": false,
+              "sh": "The display name for the template.",
+              "t": "`$STRING`"
+            },
+            "Subject": {
+              "a": true,
+              "h": "Subject",
+              "n": "Subject",
+              "r": false,
+              "sh": "The content to use for the Subject when this template is used to send email.",
+              "t": "`$STRING`"
+            },
+            "TemplateID": {
+              "a": true,
+              "h": "Template Id",
+              "n": "TemplateID",
+              "r": false,
+              "sh": "The ID associated with the template.",
+              "t": "`$INTEGER`"
+            },
+            "TemplateId": {
+              "a": true,
+              "fo": "int",
+              "h": "Template Id",
+              "n": "TemplateId",
+              "r": false,
+              "sh": "The associated ID for this template.",
+              "t": "`$NUMBER`"
+            },
+            "TextBody": {
+              "a": true,
+              "h": "Text Body",
+              "n": "TextBody",
+              "r": false,
+              "sh": "The content to use for the TextBody when this template is used to send email.",
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "template",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "POST /templates",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "body",
+                        "or": "body",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/templates",
+                  "q": {
+                    "exist": [
+                      "body",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "templates"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /templates",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "count",
+                        "or": "Count",
+                        "r": true,
+                        "t": "`$ANY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "Offset",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/templates",
+                  "q": {
+                    "exist": [
+                      "count",
+                      "offset",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "templates"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.Templates API`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /templates/{templateIdOrAlias}",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "templateIdOrAlias",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/templates/{templateIdOrAlias}",
+                  "q": {
+                    "exist": [
+                      "id",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "templateIdOrAlias": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "templates"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "remove": {
+              "input": "data",
+              "name": "remove",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "DELETE /templates/{templateIdOrAlias}",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "templateIdOrAlias",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "DELETE",
+                  "o": "/templates/{templateIdOrAlias}",
+                  "q": {
+                    "exist": [
+                      "id",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "templateIdOrAlias": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "templates"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "update": {
+              "input": "data",
+              "name": "update",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "PUT /templates/{templateIdOrAlias}",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "templateIdOrAlias",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "body",
+                        "or": "body",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "PUT",
+                  "o": "/templates/{templateIdOrAlias}",
+                  "q": {
+                    "exist": [
+                      "body",
+                      "id",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "templateIdOrAlias": "id"
+                    }
+                  },
+                  "s": [
+                    {
+                      "lit": "templates"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "template_validation": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "AllContentIsValid": {
+              "a": true,
+              "h": "All Content Is Valid",
+              "n": "AllContentIsValid",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "HtmlBody": {
+              "a": true,
+              "h": "Html Body",
+              "n": "HtmlBody",
+              "r": false,
+              "t": "`$ANY`"
+            },
+            "Subject": {
+              "a": true,
+              "h": "Subject",
+              "n": "Subject",
+              "r": false,
+              "t": "`$ANY`"
+            },
+            "SuggestedTemplateModel": {
+              "a": true,
+              "h": "Suggested Template Model",
+              "n": "SuggestedTemplateModel",
+              "r": false,
+              "t": "`$OBJECT`"
+            },
+            "TextBody": {
+              "a": true,
+              "h": "Text Body",
+              "n": "TextBody",
+              "r": false,
+              "t": "`$ANY`"
+            }
+          },
+          "name": "template_validation",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "POST /templates/validate",
+                    "source": "swagger2",
+                    "version": 2
+                  },
+                  "g": {
+                    "header": [
+                      {
+                        "a": true,
+                        "k": "header",
+                        "n": "x_postmark_server_token",
+                        "or": "X-Postmark-Server-Token",
+                        "r": true,
+                        "t": "`$ANY`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "body",
+                        "or": "body",
+                        "r": false,
+                        "t": "`$ANY`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/templates/validate",
+                  "q": {
+                    "exist": [
+                      "body",
+                      "x_postmark_server_token"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "templates"
+                    },
+                    {
+                      "lit": "validate"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "py": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicBounceDumpFlow": {
+          "active": true,
+          "entity": "bounce_dump",
+          "key$": "BasicBounceDumpFlow",
+          "kind": "basic",
+          "name": "BasicBounceDumpFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "bounce_dump_ref01",
+                "srcdatavar": "bounce_dump_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "bounce_dump01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-bounce_dump_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicBounceFlow": {
+          "active": true,
+          "entity": "bounce",
+          "key$": "BasicBounceFlow",
+          "kind": "basic",
+          "name": "BasicBounceFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "bounce_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "bounce_ref01",
+                "srcdatavar": "bounce_ref01_data",
+                "suffix": "_up0",
+                "textfield": "BouncedAt"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-bounce_ref01"
+                  }
+                }
+              ],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "bounce_ref01",
+                "srcdatavar": "bounce_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "bounce01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-bounce_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicBypassFlow": {
+          "active": true,
+          "entity": "bypass",
+          "key$": "BasicBypassFlow",
+          "kind": "basic",
+          "name": "BasicBypassFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "bypass_ref01",
+                "srcdatavar": "bypass_ref01_data",
+                "suffix": "_up0",
+                "textfield": "Message"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-bypass_ref01"
+                  }
+                }
+              ],
+              "v": []
+            }
+          ]
+        },
+        "BasicDeliveryStatFlow": {
+          "active": true,
+          "entity": "delivery_stat",
+          "key$": "BasicDeliveryStatFlow",
+          "kind": "basic",
+          "name": "BasicDeliveryStatFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "delivery_stat_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicDynamicFlow": {
+          "active": true,
+          "entity": "dynamic",
+          "key$": "BasicDynamicFlow",
+          "kind": "basic",
+          "name": "BasicDynamicFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "dynamic_ref01",
+                "srcdatavar": "dynamic_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-dynamic_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicInboundFlow": {
+          "active": true,
+          "entity": "inbound",
+          "key$": "BasicInboundFlow",
+          "kind": "basic",
+          "name": "BasicInboundFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "inbound_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicInboundMessageFullDetailFlow": {
+          "active": true,
+          "entity": "inbound_message_full_detail",
+          "key$": "BasicInboundMessageFullDetailFlow",
+          "kind": "basic",
+          "name": "BasicInboundMessageFullDetailFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "messageid": "messageid01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "inbound_message_full_detail_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicInboundruleFlow": {
+          "active": true,
+          "entity": "inboundrule",
+          "key$": "BasicInboundruleFlow",
+          "kind": "basic",
+          "name": "BasicInboundruleFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "inboundrule_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "inboundrule_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "inboundrule_ref01",
+                "suffix": "_rm0"
+              },
+              "m": {
+                "id": "inboundrule01"
+              },
+              "o": "remove",
+              "s": [],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "suffix": "_rt0"
+              },
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemNotExists",
+                  "def": {
+                    "ref": "inboundrule_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicMessageClickSearchFlow": {
+          "active": true,
+          "entity": "message_click_search",
+          "key$": "BasicMessageClickSearchFlow",
+          "kind": "basic",
+          "name": "BasicMessageClickSearchFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "message_click_search_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "message_click_search_ref01",
+                "srcdatavar": "message_click_search_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "message_click_search01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-message_click_search_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicMessageOpenSearchFlow": {
+          "active": true,
+          "entity": "message_open_search",
+          "key$": "BasicMessageOpenSearchFlow",
+          "kind": "basic",
+          "name": "BasicMessageOpenSearchFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "message_open_search_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "message_open_search_ref01",
+                "srcdatavar": "message_open_search_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "message_open_search01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-message_open_search_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicOutboundFlow": {
+          "active": true,
+          "entity": "outbound",
+          "key$": "BasicOutboundFlow",
+          "kind": "basic",
+          "name": "BasicOutboundFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "outbound_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "outbound_ref01",
+                "srcdatavar": "outbound_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-outbound_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicOutboundMessageDetailFlow": {
+          "active": true,
+          "entity": "outbound_message_detail",
+          "key$": "BasicOutboundMessageDetailFlow",
+          "kind": "basic",
+          "name": "BasicOutboundMessageDetailFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {
+                "messageid": "messageid01"
+              },
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "outbound_message_detail_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicOutboundMessageDumpFlow": {
+          "active": true,
+          "entity": "outbound_message_dump",
+          "key$": "BasicOutboundMessageDumpFlow",
+          "kind": "basic",
+          "name": "BasicOutboundMessageDumpFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "outbound_message_dump_ref01",
+                "srcdatavar": "outbound_message_dump_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "outbound_message_dump01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-outbound_message_dump_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicRetryFlow": {
+          "active": true,
+          "entity": "retry",
+          "key$": "BasicRetryFlow",
+          "kind": "basic",
+          "name": "BasicRetryFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "retry_ref01",
+                "srcdatavar": "retry_ref01_data",
+                "suffix": "_up0",
+                "textfield": "Message"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-retry_ref01"
+                  }
+                }
+              ],
+              "v": []
+            }
+          ]
+        },
+        "BasicSendEmailBatchFlow": {
+          "active": true,
+          "entity": "send_email_batch",
+          "key$": "BasicSendEmailBatchFlow",
+          "kind": "basic",
+          "name": "BasicSendEmailBatchFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "send_email_batch_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            }
+          ]
+        },
+        "BasicSendEmailFlow": {
+          "active": true,
+          "entity": "send_email",
+          "key$": "BasicSendEmailFlow",
+          "kind": "basic",
+          "name": "BasicSendEmailFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "send_email_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            }
+          ]
+        },
+        "BasicSentCountFlow": {
+          "active": true,
+          "entity": "sent_count",
+          "key$": "BasicSentCountFlow",
+          "kind": "basic",
+          "name": "BasicSentCountFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "sent_count_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicServerFlow": {
+          "active": true,
+          "entity": "server",
+          "key$": "BasicServerFlow",
+          "kind": "basic",
+          "name": "BasicServerFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "server_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "server_ref01",
+                "srcdatavar": "server_ref01_data",
+                "suffix": "_up0",
+                "textfield": "BounceHookUrl"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-server_ref01"
+                  }
+                }
+              ],
+              "v": []
+            }
+          ]
+        },
+        "BasicStatsApiFlow": {
+          "active": true,
+          "entity": "stats_api",
+          "key$": "BasicStatsApiFlow",
+          "kind": "basic",
+          "name": "BasicStatsApiFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "stats_api_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "stats_api_ref01",
+                "srcdatavar": "stats_api_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-stats_api_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicTemplateFlow": {
+          "active": true,
+          "entity": "template",
+          "key$": "BasicTemplateFlow",
+          "kind": "basic",
+          "name": "BasicTemplateFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "template_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "template_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "template_ref01",
+                "srcdatavar": "template_ref01_data",
+                "suffix": "_up0",
+                "textfield": "Alias"
+              },
+              "m": {},
+              "o": "update",
+              "s": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-template_ref01"
+                  }
+                }
+              ],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "template_ref01",
+                "srcdatavar": "template_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "template01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-template_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "template_ref01",
+                "suffix": "_rm0"
+              },
+              "m": {
+                "id": "template01"
+              },
+              "o": "remove",
+              "s": [],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "suffix": "_rt0"
+              },
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemNotExists",
+                  "def": {
+                    "ref": "template_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicTemplateValidationFlow": {
+          "active": true,
+          "entity": "template_validation",
+          "key$": "BasicTemplateValidationFlow",
+          "kind": "basic",
+          "name": "BasicTemplateValidationFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "template_validation_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            }
+          ]
+        }
+      },
+      "info": {
+        "about_md": "This is an **UNOFFICIAL SDK** for Postmark's public API. It is not affiliated with, endorsed by, or sponsored by Postmark.\n\n## Install from source\n\nFrom a source checkout, run: git clone <repository-url> postmark-sdk; cd postmark-sdk; npm --prefix ts install; npm --prefix ts run build; python3 -m pip install -e ./py.\n\n## Live authentication quickstart\n\nSet POSTMARK_SERVER_TOKEN in the environment; use POSTMARK_API_TEST for safe smoke calls. Pass it as the X-Postmark-Server-Token header. TypeScript: new PostmarkSDK({ headers: { 'X-Postmark-Server-Token': process.env.POSTMARK_SERVER_TOKEN } }). Python: PostmarkSDK({\"headers\": {\"X-Postmark-Server-Token\": os.environ[\"POSTMARK_SERVER_TOKEN\"]}}).\n\n## Offline tests\n\nFrom the repository root, run: (cd ts && npm install && npm run build && npm test); (cd py && python3 -m pytest).\n\n## How this SDK was generated\n\nThis is a Voxgig @voxgig/sdkgen project generated from server.yml, copied into .sdk/def/server.yml. The exact commands were: cd ..; npx @voxgig/create-sdkgen postmark -d postmark-sdk/server.yml -t ts,py -f test; cd postmark-sdk/.sdk; npm run build; npm run generate.\n",
+        "auth": false,
+        "description": "Postmark makes sending and receiving email\nincredibly easy.\n",
+        "servers": [
+          {
+            "url": "https://api.postmarkapp.com"
+          }
+        ],
+        "summary": "Postmark makes sending and receiving email incredibly easy.",
+        "title": "Postmark API",
+        "version": "1.0.0",
+        "website": "https://postmarkapp.com"
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "keys": "key,token,id"
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "repo": {
+        "host": "github.com",
+        "path": ""
+      },
+      "target": {
+        "py": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "requests": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.33"
+            }
+          },
+          "ext": "py",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "postmark",
+            "package": "",
+            "path": ""
+          },
+          "name": "py",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "pypi",
+              "package": "",
+              "state": "pending",
+              "url": "https://pypi.org",
+              "vault": {
+                "alias": "pypi",
+                "env": "",
+                "recipe": "pypi"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.py"
+          ],
+          "title": "Python"
+        },
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "postmark",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "",
+              "state": "pending",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      }
+    }
+  },
+  "name": "postmark",
+  "name-": "postmark",
+  "name_": "postmark",
+  "name__orig": "postmark",
+  "origin": "voxgig-sdk"
+}

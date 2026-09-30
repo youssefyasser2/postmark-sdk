@@ -1,0 +1,108 @@
+{
+  "existing": {
+    "inbound_message_full_detail": {
+      "INBOUND_MESSAGE_FULL_DETAIL00": {
+        "Attachments": [],
+        "BlockedReason": "sd3",
+        "Cc": "sd4",
+        "CcFull": [],
+        "Date": "sd6",
+        "From": "sd7",
+        "FromFull": "sd8",
+        "FromName": "sd9",
+        "Headers": [],
+        "HtmlBody": "sdb",
+        "MailboxHash": "sdc",
+        "MessageID": "sdd",
+        "OriginalRecipient": "sde",
+        "ReplyTo": "sdf",
+        "Status": "se0",
+        "Subject": "se1",
+        "Tag": "se2",
+        "TextBody": "se3",
+        "To": "se4",
+        "ToFull": [],
+        "id": "INBOUND_MESSAGE_FULL_DETAIL00"
+      },
+      "INBOUND_MESSAGE_FULL_DETAIL01": {
+        "Attachments": [],
+        "BlockedReason": "s1a5",
+        "Cc": "s1a6",
+        "CcFull": [],
+        "Date": "s1a8",
+        "From": "s1a9",
+        "FromFull": "s1aa",
+        "FromName": "s1ab",
+        "Headers": [],
+        "HtmlBody": "s1ad",
+        "MailboxHash": "s1ae",
+        "MessageID": "s1af",
+        "OriginalRecipient": "s1b0",
+        "ReplyTo": "s1b1",
+        "Status": "s1b2",
+        "Subject": "s1b3",
+        "Tag": "s1b4",
+        "TextBody": "s1b5",
+        "To": "s1b6",
+        "ToFull": [],
+        "id": "INBOUND_MESSAGE_FULL_DETAIL01"
+      },
+      "INBOUND_MESSAGE_FULL_DETAIL02": {
+        "Attachments": [],
+        "BlockedReason": "s277",
+        "Cc": "s278",
+        "CcFull": [],
+        "Date": "s27a",
+        "From": "s27b",
+        "FromFull": "s27c",
+        "FromName": "s27d",
+        "Headers": [],
+        "HtmlBody": "s27f",
+        "MailboxHash": "s280",
+        "MessageID": "s281",
+        "OriginalRecipient": "s282",
+        "ReplyTo": "s283",
+        "Status": "s284",
+        "Subject": "s285",
+        "Tag": "s286",
+        "TextBody": "s287",
+        "To": "s288",
+        "ToFull": [],
+        "id": "INBOUND_MESSAGE_FULL_DETAIL02"
+      }
+    }
+  },
+  "new": {
+    "inbound_message_full_detail": {
+      "inbound_message_full_detail_ref01": {
+        "Attachments": [],
+        "BlockedReason": "s349",
+        "Cc": "s34a",
+        "CcFull": [],
+        "Date": "s34c",
+        "From": "s34d",
+        "FromFull": "s34e",
+        "FromName": "s34f",
+        "Headers": [],
+        "HtmlBody": "s351",
+        "MailboxHash": "s352",
+        "MessageID": "s353",
+        "OriginalRecipient": "s354",
+        "ReplyTo": "s355",
+        "Status": "s356",
+        "Subject": "s357",
+        "Tag": "s358",
+        "TextBody": "s359",
+        "To": "s35a",
+        "ToFull": []
+      }
+    }
+  },
+  "requests": {
+    "GET /messages/inbound/{messageid}/details": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+# BasicMessageClickSearchFlow
+
+main: kit: flow: BasicMessageClickSearchFlow:
+{
+  entity: "message_click_search",
+  kind: "basic",
+  name: "BasicMessageClickSearchFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "message_click_search_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "message_click_search_ref01",
+        srcdatavar: "message_click_search_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "message_click_search01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-message_click_search_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMessageClickSearchFlow"
+}

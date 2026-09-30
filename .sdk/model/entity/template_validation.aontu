@@ -1,0 +1,98 @@
+# Entity: template_validation
+
+main: kit: entity: template_validation: {
+
+  alias: field: {}
+
+  fields: {
+    AllContentIsValid: {
+      h: "All Content Is Valid"
+      n: "AllContentIsValid"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    HtmlBody: {
+      h: "Html Body"
+      n: "HtmlBody"
+      r: false
+      t: "`$ANY`"
+    }
+    Subject: {
+      h: "Subject"
+      n: "Subject"
+      r: false
+      t: "`$ANY`"
+    }
+    SuggestedTemplateModel: {
+      h: "Suggested Template Model"
+      n: "SuggestedTemplateModel"
+      r: false
+      t: "`$OBJECT`"
+    }
+    TextBody: {
+      h: "Text Body"
+      n: "TextBody"
+      r: false
+      t: "`$ANY`"
+    }
+  }
+
+  name: "template_validation"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /templates/validate"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "body"
+                or: "body"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/templates/validate"
+          q: {
+            exist: [
+              "body"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "templates"
+            }
+            {
+              lit: "validate"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

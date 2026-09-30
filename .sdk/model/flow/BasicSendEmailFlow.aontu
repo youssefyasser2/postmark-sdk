@@ -1,0 +1,18 @@
+# BasicSendEmailFlow
+
+main: kit: flow: BasicSendEmailFlow:
+{
+  entity: "send_email",
+  kind: "basic",
+  name: "BasicSendEmailFlow",
+  step: [
+    {
+      i: {
+        ref: "send_email_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicSendEmailFlow"
+}

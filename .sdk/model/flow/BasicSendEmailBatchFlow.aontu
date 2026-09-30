@@ -1,0 +1,18 @@
+# BasicSendEmailBatchFlow
+
+main: kit: flow: BasicSendEmailBatchFlow:
+{
+  entity: "send_email_batch",
+  kind: "basic",
+  name: "BasicSendEmailBatchFlow",
+  step: [
+    {
+      i: {
+        ref: "send_email_batch_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicSendEmailBatchFlow"
+}

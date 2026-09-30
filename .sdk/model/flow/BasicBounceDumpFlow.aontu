@@ -1,0 +1,32 @@
+# BasicBounceDumpFlow
+
+main: kit: flow: BasicBounceDumpFlow:
+{
+  entity: "bounce_dump",
+  kind: "basic",
+  name: "BasicBounceDumpFlow",
+  step: [
+    {
+      i: {
+        ref: "bounce_dump_ref01",
+        srcdatavar: "bounce_dump_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "bounce_dump01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-bounce_dump_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicBounceDumpFlow"
+}

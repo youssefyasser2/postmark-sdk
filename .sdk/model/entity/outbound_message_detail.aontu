@@ -1,0 +1,193 @@
+# Entity: outbound_message_detail
+
+main: kit: entity: outbound_message_detail: {
+
+  alias: field: {}
+
+  fields: {
+    Attachments: {
+      h: "Attachments"
+      n: "Attachments"
+      r: false
+      t: "`$ARRAY`"
+    }
+    Bcc: {
+      h: "Bcc"
+      n: "Bcc"
+      r: false
+      t: "`$ARRAY`"
+    }
+    Body: {
+      h: "Body"
+      n: "Body"
+      r: false
+      t: "`$STRING`"
+    }
+    Cc: {
+      h: "Cc"
+      n: "Cc"
+      r: false
+      t: "`$ARRAY`"
+    }
+    From: {
+      h: "From"
+      n: "From"
+      r: false
+      t: "`$STRING`"
+    }
+    HtmlBody: {
+      h: "Html Body"
+      n: "HtmlBody"
+      r: false
+      t: "`$STRING`"
+    }
+    MessageEvents: {
+      h: "Message Events"
+      n: "MessageEvents"
+      r: false
+      t: "`$ARRAY`"
+    }
+    MessageID: {
+      h: "Message Id"
+      n: "MessageID"
+      r: false
+      t: "`$STRING`"
+    }
+    ReceivedAt: {
+      fo: "date-time"
+      h: "Received At"
+      n: "ReceivedAt"
+      r: false
+      t: "`$STRING`"
+    }
+    Recipients: {
+      h: "Recipients"
+      n: "Recipients"
+      r: false
+      t: "`$ARRAY`"
+    }
+    Status: {
+      h: "Status"
+      n: "Status"
+      r: false
+      t: "`$STRING`"
+    }
+    Subject: {
+      h: "Subject"
+      n: "Subject"
+      r: false
+      t: "`$STRING`"
+    }
+    Tag: {
+      h: "Tag"
+      n: "Tag"
+      r: false
+      t: "`$STRING`"
+    }
+    TextBody: {
+      h: "Text Body"
+      n: "TextBody"
+      r: false
+      t: "`$STRING`"
+    }
+    To: {
+      h: "To"
+      n: "To"
+      r: false
+      t: "`$ARRAY`"
+    }
+    TrackLinks: {
+      h: "Track Links"
+      n: "TrackLinks"
+      r: false
+      t: "`$STRING`"
+    }
+    TrackOpens: {
+      h: "Track Opens"
+      n: "TrackOpens"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "outbound_message_detail"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /messages/outbound/{messageid}/details"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "messageid"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/messages/outbound/{messageid}/details"
+          q: {
+            exist: [
+              "id"
+              "x_postmark_server_token"
+            ]
+          }
+          r: {
+            param: {
+              messageid: "id"
+            }
+          }
+          s: [
+            {
+              lit: "messages"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "details"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

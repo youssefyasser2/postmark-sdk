@@ -6,3 +6,22 @@
 
 
 
+# The Swagger 2 definition names the body parameter `body`. The generated
+# request type retains that convenience wrapper, but Postmark expects the
+# email object/array itself as the JSON document root.
+guide: {
+  entity: send_email: {
+    path: "/email": {
+      op: create: transform: req: *("`reqdata.body`")|top
+    }
+    path: "/email/withTemplate": {
+      op: create: transform: req: *("`reqdata.body`")|top
+    }
+  }
+  entity: send_email_batch: {
+    path: "/email/batch": {
+      op: create: transform: req: *("`reqdata.body`")|top
+    }
+    path: "/email/batchWithTemplates": {
+      op: create: transform: req: *("`reqdata.body`")|top
+    }

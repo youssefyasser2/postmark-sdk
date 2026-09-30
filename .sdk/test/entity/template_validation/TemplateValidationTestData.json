@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "template_validation": {
+      "TEMPLATE_VALIDATION00": {
+        "AllContentIsValid": true,
+        "HtmlBody": "s33",
+        "Subject": "s34",
+        "SuggestedTemplateModel": {},
+        "TextBody": "s36",
+        "id": "TEMPLATE_VALIDATION00"
+      },
+      "TEMPLATE_VALIDATION01": {
+        "AllContentIsValid": true,
+        "HtmlBody": "s65",
+        "Subject": "s66",
+        "SuggestedTemplateModel": {},
+        "TextBody": "s68",
+        "id": "TEMPLATE_VALIDATION01"
+      },
+      "TEMPLATE_VALIDATION02": {
+        "AllContentIsValid": true,
+        "HtmlBody": "s97",
+        "Subject": "s98",
+        "SuggestedTemplateModel": {},
+        "TextBody": "s9a",
+        "id": "TEMPLATE_VALIDATION02"
+      }
+    }
+  },
+  "new": {
+    "template_validation": {
+      "template_validation_ref01": {
+        "AllContentIsValid": true,
+        "HtmlBody": "sc9",
+        "Subject": "sca",
+        "SuggestedTemplateModel": {},
+        "TextBody": "scc"
+      }
+    }
+  },
+  "requests": {
+    "POST /templates/validate": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+# BasicMessageOpenSearchFlow
+
+main: kit: flow: BasicMessageOpenSearchFlow:
+{
+  entity: "message_open_search",
+  kind: "basic",
+  name: "BasicMessageOpenSearchFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "message_open_search_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "message_open_search_ref01",
+        srcdatavar: "message_open_search_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "message_open_search01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-message_open_search_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMessageOpenSearchFlow"
+}

@@ -1,0 +1,22 @@
+# BasicSentCountFlow
+
+main: kit: flow: BasicSentCountFlow:
+{
+  entity: "sent_count",
+  kind: "basic",
+  name: "BasicSentCountFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "sent_count_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSentCountFlow"
+}

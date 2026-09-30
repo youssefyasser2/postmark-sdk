@@ -1,0 +1,96 @@
+{
+  "existing": {
+    "outbound_message_detail": {
+      "OUTBOUND_MESSAGE_DETAIL00": {
+        "Attachments": [],
+        "Bcc": [],
+        "Body": "sb6",
+        "Cc": [],
+        "From": "sb8",
+        "HtmlBody": "sb9",
+        "MessageEvents": [],
+        "MessageID": "sbb",
+        "ReceivedAt": "sbc",
+        "Recipients": [],
+        "Status": "sbe",
+        "Subject": "sbf",
+        "Tag": "sc0",
+        "TextBody": "sc1",
+        "To": [],
+        "TrackLinks": "sc3",
+        "TrackOpens": true,
+        "id": "OUTBOUND_MESSAGE_DETAIL00"
+      },
+      "OUTBOUND_MESSAGE_DETAIL01": {
+        "Attachments": [],
+        "Bcc": [],
+        "Body": "s16a",
+        "Cc": [],
+        "From": "s16c",
+        "HtmlBody": "s16d",
+        "MessageEvents": [],
+        "MessageID": "s16f",
+        "ReceivedAt": "s170",
+        "Recipients": [],
+        "Status": "s172",
+        "Subject": "s173",
+        "Tag": "s174",
+        "TextBody": "s175",
+        "To": [],
+        "TrackLinks": "s177",
+        "TrackOpens": true,
+        "id": "OUTBOUND_MESSAGE_DETAIL01"
+      },
+      "OUTBOUND_MESSAGE_DETAIL02": {
+        "Attachments": [],
+        "Bcc": [],
+        "Body": "s21e",
+        "Cc": [],
+        "From": "s220",
+        "HtmlBody": "s221",
+        "MessageEvents": [],
+        "MessageID": "s223",
+        "ReceivedAt": "s224",
+        "Recipients": [],
+        "Status": "s226",
+        "Subject": "s227",
+        "Tag": "s228",
+        "TextBody": "s229",
+        "To": [],
+        "TrackLinks": "s22b",
+        "TrackOpens": true,
+        "id": "OUTBOUND_MESSAGE_DETAIL02"
+      }
+    }
+  },
+  "new": {
+    "outbound_message_detail": {
+      "outbound_message_detail_ref01": {
+        "Attachments": [],
+        "Bcc": [],
+        "Body": "s2d2",
+        "Cc": [],
+        "From": "s2d4",
+        "HtmlBody": "s2d5",
+        "MessageEvents": [],
+        "MessageID": "s2d7",
+        "ReceivedAt": "s2d8",
+        "Recipients": [],
+        "Status": "s2da",
+        "Subject": "s2db",
+        "Tag": "s2dc",
+        "TextBody": "s2dd",
+        "To": [],
+        "TrackLinks": "s2df",
+        "TrackOpens": true
+      }
+    }
+  },
+  "requests": {
+    "GET /messages/outbound/{messageid}/details": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

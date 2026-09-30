@@ -1,0 +1,73 @@
+# Entity: delivery_stat
+
+main: kit: entity: delivery_stat: {
+
+  alias: field: {}
+
+  fields: {
+    Count: {
+      h: "Count"
+      n: "Count"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Name: {
+      h: "Name"
+      n: "Name"
+      r: false
+      t: "`$STRING`"
+    }
+    Type: {
+      h: "Type"
+      n: "Type"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "delivery_stat"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /deliverystats"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/deliverystats"
+          q: {
+            exist: [
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "deliverystats"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Bounces`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

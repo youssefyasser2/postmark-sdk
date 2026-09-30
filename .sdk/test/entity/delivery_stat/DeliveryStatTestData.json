@@ -1,0 +1,37 @@
+{
+  "existing": {
+    "delivery_stat": {
+      "DELIVERY_STAT00": {
+        "Count": 30,
+        "Name": "s1f",
+        "Type": "s20"
+      },
+      "DELIVERY_STAT01": {
+        "Count": 60,
+        "Name": "s3d",
+        "Type": "s3e"
+      },
+      "DELIVERY_STAT02": {
+        "Count": 90,
+        "Name": "s5b",
+        "Type": "s5c"
+      }
+    }
+  },
+  "new": {
+    "delivery_stat": {
+      "delivery_stat_ref01": {
+        "Count": 120,
+        "Name": "s79",
+        "Type": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /deliverystats": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

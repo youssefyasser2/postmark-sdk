@@ -1,0 +1,22 @@
+# BasicDeliveryStatFlow
+
+main: kit: flow: BasicDeliveryStatFlow:
+{
+  entity: "delivery_stat",
+  kind: "basic",
+  name: "BasicDeliveryStatFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "delivery_stat_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicDeliveryStatFlow"
+}

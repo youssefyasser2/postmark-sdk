@@ -1,0 +1,97 @@
+# Entity: outbound_message_dump
+
+main: kit: entity: outbound_message_dump: {
+
+  alias: field: {}
+
+  fields: {
+    Body: {
+      h: "Body"
+      n: "Body"
+      r: false
+      sh: "Raw source of message."
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "outbound_message_dump"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /messages/outbound/{messageid}/dump"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "messageid"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/messages/outbound/{messageid}/dump"
+          q: {
+            exist: [
+              "id"
+              "x_postmark_server_token"
+            ]
+          }
+          r: {
+            param: {
+              messageid: "id"
+            }
+          }
+          s: [
+            {
+              lit: "messages"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "dump"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

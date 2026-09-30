@@ -1,0 +1,39 @@
+{
+  "existing": {
+    "retry": {
+      "RETRY00": {
+        "ErrorCode": 20,
+        "Message": "s15",
+        "inbound_id": "INBOUND01",
+        "id": "RETRY00"
+      },
+      "RETRY01": {
+        "ErrorCode": 40,
+        "Message": "s29",
+        "inbound_id": "INBOUND01",
+        "id": "RETRY01"
+      },
+      "RETRY02": {
+        "ErrorCode": 60,
+        "Message": "s3d",
+        "inbound_id": "INBOUND01",
+        "id": "RETRY02"
+      }
+    }
+  },
+  "new": {
+    "retry": {
+      "retry_ref01": {
+        "ErrorCode": 80,
+        "Message": "s51"
+      }
+    }
+  },
+  "requests": {
+    "PUT /messages/inbound/{messageid}/retry": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

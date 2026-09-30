@@ -1,0 +1,236 @@
+# Entity: inbound
+
+main: kit: entity: inbound: {
+
+  alias: field: {}
+
+  fields: {
+    Attachments: {
+      h: "Attachments"
+      n: "Attachments"
+      r: false
+      t: "`$ARRAY`"
+    }
+    Cc: {
+      h: "Cc"
+      n: "Cc"
+      r: false
+      t: "`$STRING`"
+    }
+    CcFull: {
+      h: "Cc Full"
+      n: "CcFull"
+      r: false
+      t: "`$ARRAY`"
+    }
+    Date: {
+      h: "Date"
+      n: "Date"
+      r: false
+      t: "`$STRING`"
+    }
+    From: {
+      h: "From"
+      n: "From"
+      r: false
+      t: "`$STRING`"
+    }
+    FromFull: {
+      h: "From Full"
+      n: "FromFull"
+      r: false
+      t: "`$ANY`"
+    }
+    FromName: {
+      h: "From Name"
+      n: "FromName"
+      r: false
+      t: "`$STRING`"
+    }
+    MailboxHash: {
+      h: "Mailbox Hash"
+      n: "MailboxHash"
+      r: false
+      t: "`$STRING`"
+    }
+    MessageID: {
+      h: "Message Id"
+      n: "MessageID"
+      r: false
+      t: "`$STRING`"
+    }
+    OriginalRecipient: {
+      h: "Original Recipient"
+      n: "OriginalRecipient"
+      r: false
+      t: "`$STRING`"
+    }
+    ReplyTo: {
+      h: "Reply To"
+      n: "ReplyTo"
+      r: false
+      t: "`$STRING`"
+    }
+    Status: {
+      h: "Status"
+      n: "Status"
+      r: false
+      t: "`$STRING`"
+    }
+    Subject: {
+      h: "Subject"
+      n: "Subject"
+      r: false
+      t: "`$STRING`"
+    }
+    Tag: {
+      h: "Tag"
+      n: "Tag"
+      r: false
+      t: "`$STRING`"
+    }
+    To: {
+      h: "To"
+      n: "To"
+      r: false
+      t: "`$STRING`"
+    }
+    ToFull: {
+      h: "To Full"
+      n: "ToFull"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "inbound"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /messages/inbound"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "count"
+                or: "count"
+                r: true
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "fromemail"
+                or: "fromemail"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "mailboxhash"
+                or: "mailboxhash"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "offset"
+                or: "offset"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "recipient"
+                or: "recipient"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "status"
+                or: "status"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "subject"
+                or: "subject"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/messages/inbound"
+          q: {
+            exist: [
+              "count"
+              "fromdate"
+              "fromemail"
+              "mailboxhash"
+              "offset"
+              "recipient"
+              "status"
+              "subject"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "messages"
+            }
+            {
+              lit: "inbound"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.InboundMessages`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

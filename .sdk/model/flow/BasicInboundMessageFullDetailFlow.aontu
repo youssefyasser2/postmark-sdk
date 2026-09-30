@@ -1,0 +1,26 @@
+# BasicInboundMessageFullDetailFlow
+
+main: kit: flow: BasicInboundMessageFullDetailFlow:
+{
+  entity: "inbound_message_full_detail",
+  kind: "basic",
+  name: "BasicInboundMessageFullDetailFlow",
+  step: [
+    {
+      m: {
+        messageid: "messageid01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "inbound_message_full_detail_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicInboundMessageFullDetailFlow"
+}

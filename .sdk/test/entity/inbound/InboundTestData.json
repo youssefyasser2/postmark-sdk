@@ -1,0 +1,89 @@
+{
+  "existing": {
+    "inbound": {
+      "INBOUND00": {
+        "Attachments": [],
+        "Cc": "sa1",
+        "CcFull": [],
+        "Date": "sa3",
+        "From": "sa4",
+        "FromFull": "sa5",
+        "FromName": "sa6",
+        "MailboxHash": "sa7",
+        "MessageID": "sa8",
+        "OriginalRecipient": "sa9",
+        "ReplyTo": "saa",
+        "Status": "sab",
+        "Subject": "sac",
+        "Tag": "sad",
+        "To": "sae",
+        "ToFull": []
+      },
+      "INBOUND01": {
+        "Attachments": [],
+        "Cc": "s141",
+        "CcFull": [],
+        "Date": "s143",
+        "From": "s144",
+        "FromFull": "s145",
+        "FromName": "s146",
+        "MailboxHash": "s147",
+        "MessageID": "s148",
+        "OriginalRecipient": "s149",
+        "ReplyTo": "s14a",
+        "Status": "s14b",
+        "Subject": "s14c",
+        "Tag": "s14d",
+        "To": "s14e",
+        "ToFull": []
+      },
+      "INBOUND02": {
+        "Attachments": [],
+        "Cc": "s1e1",
+        "CcFull": [],
+        "Date": "s1e3",
+        "From": "s1e4",
+        "FromFull": "s1e5",
+        "FromName": "s1e6",
+        "MailboxHash": "s1e7",
+        "MessageID": "s1e8",
+        "OriginalRecipient": "s1e9",
+        "ReplyTo": "s1ea",
+        "Status": "s1eb",
+        "Subject": "s1ec",
+        "Tag": "s1ed",
+        "To": "s1ee",
+        "ToFull": []
+      }
+    }
+  },
+  "new": {
+    "inbound": {
+      "inbound_ref01": {
+        "Attachments": [],
+        "Cc": "s281",
+        "CcFull": [],
+        "Date": "s283",
+        "From": "s284",
+        "FromFull": "s285",
+        "FromName": "s286",
+        "MailboxHash": "s287",
+        "MessageID": "s288",
+        "OriginalRecipient": "s289",
+        "ReplyTo": "s28a",
+        "Status": "s28b",
+        "Subject": "s28c",
+        "Tag": "s28d",
+        "To": "s28e",
+        "ToFull": []
+      }
+    }
+  },
+  "requests": {
+    "GET /messages/inbound": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

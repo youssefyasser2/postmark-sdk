@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "sent_count": {
+      "SENT_COUNT00": {
+        "Date": "s14",
+        "Sent": 21
+      },
+      "SENT_COUNT01": {
+        "Date": "s28",
+        "Sent": 41
+      },
+      "SENT_COUNT02": {
+        "Date": "s3c",
+        "Sent": 61
+      }
+    }
+  },
+  "new": {
+    "sent_count": {
+      "sent_count_ref01": {
+        "Date": "s50",
+        "Sent": 81
+      }
+    }
+  },
+  "requests": {
+    "GET /stats/outbound/sends": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

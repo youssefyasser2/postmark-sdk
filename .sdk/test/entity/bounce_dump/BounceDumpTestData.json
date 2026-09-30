@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "bounce_dump": {
+      "BOUNCE_DUMP00": {
+        "Body": "s14",
+        "id": "BOUNCE_DUMP00"
+      },
+      "BOUNCE_DUMP01": {
+        "Body": "s28",
+        "id": "BOUNCE_DUMP01"
+      },
+      "BOUNCE_DUMP02": {
+        "Body": "s3c",
+        "id": "BOUNCE_DUMP02"
+      }
+    }
+  },
+  "new": {
+    "bounce_dump": {
+      "bounce_dump_ref01": {
+        "Body": "s50"
+      }
+    }
+  },
+  "requests": {
+    "GET /bounces/{bounceid}/dump": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

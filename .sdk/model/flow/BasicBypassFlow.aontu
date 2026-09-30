@@ -1,0 +1,29 @@
+# BasicBypassFlow
+
+main: kit: flow: BasicBypassFlow:
+{
+  entity: "bypass",
+  kind: "basic",
+  name: "BasicBypassFlow",
+  step: [
+    {
+      i: {
+        ref: "bypass_ref01",
+        srcdatavar: "bypass_ref01_data",
+        suffix: "_up0",
+        textfield: "Message"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-bypass_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicBypassFlow"
+}

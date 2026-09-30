@@ -1,0 +1,221 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 21
+  metrics: count: path: 38
+  metrics: count: method: 43
+
+  entity: bounce: {
+    path: "/bounces": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Bounces`")|top
+    }
+    path: "/bounces/{bounceid}": {
+      rename: param: "bounceid": *"id"
+      op: load: method: *GET
+    }
+    path: "/bounces/{bounceid}/activate": {
+      action: "activate": {}
+      rename: param: "bounceid": *"id"
+      op: update: method: *PUT
+      op: update: transform: res: *("`body.Bounce`")|top
+    }
+  }
+
+  entity: bounce_dump: {
+    path: "/bounces/{bounceid}/dump": {
+      rename: param: "bounceid": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: bypass: {
+    path: "/messages/inbound/{messageid}/bypass": {
+      rename: param: "messageid": *"inbound_id"
+      op: update: method: *PUT
+    }
+  }
+
+  entity: delivery_stat: {
+    path: "/deliverystats": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Bounces`")|top
+    }
+  }
+
+  entity: dynamic: {
+    path: "/stats/outbound/clicks": {
+      op: load: method: *GET
+    }
+    path: "/stats/outbound/clicks/location": {
+      op: load: method: *GET
+    }
+    path: "/stats/outbound/clicks/platforms": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: inbound: {
+    path: "/messages/inbound": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.InboundMessages`")|top
+    }
+  }
+
+  entity: inbound_message_full_detail: {
+    path: "/messages/inbound/{messageid}/details": {
+      rename: param: "messageid": *"id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: inboundrule: {
+    path: "/triggers/inboundrules": {
+      op: create: method: *POST
+      op: list: method: *GET
+      op: list: transform: res: *("`body.InboundRules`")|top
+    }
+    path: "/triggers/inboundrules/{triggerid}": {
+      rename: param: "triggerid": *"id"
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: message_click_search: {
+    path: "/messages/outbound/clicks": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Clicks`")|top
+    }
+    path: "/messages/outbound/clicks/{messageid}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: message_open_search: {
+    path: "/messages/outbound/opens": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Opens`")|top
+    }
+    path: "/messages/outbound/opens/{messageid}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: outbound: {
+    path: "/messages/outbound": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Messages`")|top
+    }
+    path: "/stats/outbound": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: outbound_message_detail: {
+    path: "/messages/outbound/{messageid}/details": {
+      rename: param: "messageid": *"id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: outbound_message_dump: {
+    path: "/messages/outbound/{messageid}/dump": {
+      rename: param: "messageid": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: retry: {
+    path: "/messages/inbound/{messageid}/retry": {
+      rename: param: "messageid": *"inbound_id"
+      op: update: method: *PUT
+    }
+  }
+
+  entity: send_email: {
+    path: "/email": {
+      op: create: method: *POST
+    }
+    path: "/email/withTemplate": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: send_email_batch: {
+    path: "/email/batch": {
+      op: create: method: *POST
+    }
+    path: "/email/batchWithTemplates": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: sent_count: {
+    path: "/stats/outbound/sends": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Days`")|top
+    }
+  }
+
+  entity: server: {
+    path: "/server": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.ApiTokens`")|top
+      op: update: method: *PUT
+    }
+  }
+
+  entity: stats_api: {
+    path: "/stats/outbound/bounces": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Days`")|top
+    }
+    path: "/stats/outbound/clicks/browserfamilies": {
+      op: load: method: *GET
+    }
+    path: "/stats/outbound/opens": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Days`")|top
+    }
+    path: "/stats/outbound/opens/emailclients": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Days`")|top
+    }
+    path: "/stats/outbound/opens/platforms": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Days`")|top
+    }
+    path: "/stats/outbound/spam": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Days`")|top
+    }
+    path: "/stats/outbound/tracked": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Days`")|top
+    }
+  }
+
+  entity: template: {
+    path: "/templates": {
+      op: create: method: *POST
+      op: list: method: *GET
+      op: list: transform: res: *("`body.Templates API`")|top
+    }
+    path: "/templates/{templateIdOrAlias}": {
+      rename: param: "templateIdOrAlias": *"id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+  }
+
+  entity: template_validation: {
+    path: "/templates/validate": {
+      op: create: method: *POST
+    }
+  }
+
+}

@@ -1,0 +1,32 @@
+# BasicOutboundMessageDumpFlow
+
+main: kit: flow: BasicOutboundMessageDumpFlow:
+{
+  entity: "outbound_message_dump",
+  kind: "basic",
+  name: "BasicOutboundMessageDumpFlow",
+  step: [
+    {
+      i: {
+        ref: "outbound_message_dump_ref01",
+        srcdatavar: "outbound_message_dump_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "outbound_message_dump01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-outbound_message_dump_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicOutboundMessageDumpFlow"
+}

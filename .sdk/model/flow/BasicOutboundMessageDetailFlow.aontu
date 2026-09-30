@@ -1,0 +1,26 @@
+# BasicOutboundMessageDetailFlow
+
+main: kit: flow: BasicOutboundMessageDetailFlow:
+{
+  entity: "outbound_message_detail",
+  kind: "basic",
+  name: "BasicOutboundMessageDetailFlow",
+  step: [
+    {
+      m: {
+        messageid: "messageid01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "outbound_message_detail_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicOutboundMessageDetailFlow"
+}

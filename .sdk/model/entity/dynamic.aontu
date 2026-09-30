@@ -1,0 +1,225 @@
+# Entity: dynamic
+
+main: kit: entity: dynamic: {
+
+  alias: field: {}
+
+  name: "dynamic"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /stats/outbound/clicks"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/stats/outbound/clicks"
+          q: {
+            exist: [
+              "fromdate"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "stats"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "clicks"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /stats/outbound/clicks/location"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/stats/outbound/clicks/location"
+          q: {
+            exist: [
+              "fromdate"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "stats"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "clicks"
+            }
+            {
+              lit: "location"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /stats/outbound/clicks/platforms"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/stats/outbound/clicks/platforms"
+          q: {
+            exist: [
+              "fromdate"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "stats"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "clicks"
+            }
+            {
+              lit: "platforms"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

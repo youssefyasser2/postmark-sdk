@@ -1,0 +1,84 @@
+{
+  "existing": {
+    "template": {
+      "TEMPLATE00": {
+        "Active": true,
+        "Alias": "s65",
+        "AssociatedServerId": 102,
+        "HtmlBody": "s67",
+        "Name": "s68",
+        "Subject": "s69",
+        "TemplateID": 106,
+        "TemplateId": 107,
+        "TextBody": "s6c",
+        "id": "TEMPLATE00"
+      },
+      "TEMPLATE01": {
+        "Active": true,
+        "Alias": "sc9",
+        "AssociatedServerId": 202,
+        "HtmlBody": "scb",
+        "Name": "scc",
+        "Subject": "scd",
+        "TemplateID": 206,
+        "TemplateId": 207,
+        "TextBody": "sd0",
+        "id": "TEMPLATE01"
+      },
+      "TEMPLATE02": {
+        "Active": true,
+        "Alias": "s12d",
+        "AssociatedServerId": 302,
+        "HtmlBody": "s12f",
+        "Name": "s130",
+        "Subject": "s131",
+        "TemplateID": 306,
+        "TemplateId": 307,
+        "TextBody": "s134",
+        "id": "TEMPLATE02"
+      }
+    }
+  },
+  "new": {
+    "template": {
+      "template_ref01": {
+        "Active": true,
+        "Alias": "s191",
+        "AssociatedServerId": 402,
+        "HtmlBody": "s193",
+        "Name": "s194",
+        "Subject": "s195",
+        "TemplateID": 406,
+        "TemplateId": 407,
+        "TextBody": "s198"
+      }
+    }
+  },
+  "requests": {
+    "POST /templates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "GET /templates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "GET /templates/{templateIdOrAlias}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "DELETE /templates/{templateIdOrAlias}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "PUT /templates/{templateIdOrAlias}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

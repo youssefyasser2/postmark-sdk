@@ -6,11 +6,12 @@ import {
   PublishWorkflow,
   ReadmeTop,
   AgentGuideTop,
-  License,
   Security,
   Changelog,
 } from '@voxgig/sdkgen'
 
+
+import { ProjectLicense } from './ProjectLicense'
 
 const Top = cmp(function Top(props: any) {
   ReadmeTop({})
@@ -20,7 +21,7 @@ const Top = cmp(function Top(props: any) {
   // any target Folder (same placement rule as ReadmeTop / Deploy).
   AgentGuideTop({})
 
-  License({})
+  ProjectLicense({})
   Security({})
   Changelog({})
 

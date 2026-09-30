@@ -1,0 +1,28 @@
+# BasicDynamicFlow
+
+main: kit: flow: BasicDynamicFlow:
+{
+  entity: "dynamic",
+  kind: "basic",
+  name: "BasicDynamicFlow",
+  step: [
+    {
+      i: {
+        ref: "dynamic_ref01",
+        srcdatavar: "dynamic_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-dynamic_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicDynamicFlow"
+}

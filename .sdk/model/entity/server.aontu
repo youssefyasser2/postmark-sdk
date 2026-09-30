@@ -1,0 +1,219 @@
+# Entity: server
+
+main: kit: entity: server: {
+
+  alias: field: {}
+
+  fields: {
+    ApiTokens: {
+      h: "Api Tokens"
+      n: "ApiTokens"
+      r: false
+      t: "`$ARRAY`"
+    }
+    BounceHookUrl: {
+      h: "Bounce Hook Url"
+      n: "BounceHookUrl"
+      r: false
+      t: "`$STRING`"
+    }
+    ClickHookUrl: {
+      h: "Click Hook Url"
+      n: "ClickHookUrl"
+      r: false
+      t: "`$STRING`"
+    }
+    Color: {
+      h: "Color"
+      n: "Color"
+      r: false
+      t: "`$STRING`"
+    }
+    DeliveryHookUrl: {
+      h: "Delivery Hook Url"
+      n: "DeliveryHookUrl"
+      r: false
+      t: "`$STRING`"
+    }
+    ID: {
+      h: "Id"
+      n: "ID"
+      r: false
+      t: "`$INTEGER`"
+    }
+    InboundAddress: {
+      fo: "email"
+      h: "Inbound Address"
+      n: "InboundAddress"
+      r: false
+      t: "`$STRING`"
+    }
+    InboundDomain: {
+      h: "Inbound Domain"
+      n: "InboundDomain"
+      r: false
+      t: "`$STRING`"
+    }
+    InboundHash: {
+      h: "Inbound Hash"
+      n: "InboundHash"
+      r: false
+      t: "`$STRING`"
+    }
+    InboundHookUrl: {
+      h: "Inbound Hook Url"
+      n: "InboundHookUrl"
+      r: false
+      t: "`$STRING`"
+    }
+    InboundSpamThreshold: {
+      h: "Inbound Spam Threshold"
+      n: "InboundSpamThreshold"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Name: {
+      h: "Name"
+      n: "Name"
+      r: false
+      t: "`$STRING`"
+    }
+    OpenHookUrl: {
+      h: "Open Hook Url"
+      n: "OpenHookUrl"
+      r: false
+      t: "`$STRING`"
+    }
+    PostFirstOpenOnly: {
+      h: "Post First Open Only"
+      n: "PostFirstOpenOnly"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    RawEmailEnabled: {
+      h: "Raw Email Enabled"
+      n: "RawEmailEnabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    ServerLink: {
+      h: "Server Link"
+      n: "ServerLink"
+      r: false
+      t: "`$STRING`"
+    }
+    SmtpApiActivated: {
+      h: "Smtp Api Activated"
+      n: "SmtpApiActivated"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    TrackLinks: {
+      h: "Track Links"
+      n: "TrackLinks"
+      r: false
+      t: "`$STRING`"
+    }
+    TrackOpens: {
+      h: "Track Opens"
+      n: "TrackOpens"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "server"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /server"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/server"
+          q: {
+            exist: [
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "server"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.ApiTokens`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /server"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "body"
+                or: "body"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/server"
+          q: {
+            exist: [
+              "body"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "server"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

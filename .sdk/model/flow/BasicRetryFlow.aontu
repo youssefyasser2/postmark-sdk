@@ -1,0 +1,29 @@
+# BasicRetryFlow
+
+main: kit: flow: BasicRetryFlow:
+{
+  entity: "retry",
+  kind: "basic",
+  name: "BasicRetryFlow",
+  step: [
+    {
+      i: {
+        ref: "retry_ref01",
+        srcdatavar: "retry_ref01_data",
+        suffix: "_up0",
+        textfield: "Message"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-retry_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicRetryFlow"
+}

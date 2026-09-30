@@ -1,0 +1,114 @@
+{
+  "existing": {
+    "stats_api": {
+      "STATS_API00": {
+        "Date": "s8c",
+        "Days": [],
+        "Desktop": 142,
+        "HardBounce": 143,
+        "Mobile": 144,
+        "Opens": 145,
+        "SMTPApiError": 146,
+        "SoftBounce": 147,
+        "SpamComplaint": 148,
+        "Tracked": 149,
+        "Transient": 150,
+        "Unique": 151,
+        "Unknown": 152,
+        "WebMail": 153,
+        "id": "STATS_API00"
+      },
+      "STATS_API01": {
+        "Date": "s118",
+        "Days": [],
+        "Desktop": 282,
+        "HardBounce": 283,
+        "Mobile": 284,
+        "Opens": 285,
+        "SMTPApiError": 286,
+        "SoftBounce": 287,
+        "SpamComplaint": 288,
+        "Tracked": 289,
+        "Transient": 290,
+        "Unique": 291,
+        "Unknown": 292,
+        "WebMail": 293,
+        "id": "STATS_API01"
+      },
+      "STATS_API02": {
+        "Date": "s1a4",
+        "Days": [],
+        "Desktop": 422,
+        "HardBounce": 423,
+        "Mobile": 424,
+        "Opens": 425,
+        "SMTPApiError": 426,
+        "SoftBounce": 427,
+        "SpamComplaint": 428,
+        "Tracked": 429,
+        "Transient": 430,
+        "Unique": 431,
+        "Unknown": 432,
+        "WebMail": 433,
+        "id": "STATS_API02"
+      }
+    }
+  },
+  "new": {
+    "stats_api": {
+      "stats_api_ref01": {
+        "Date": "s230",
+        "Days": [],
+        "Desktop": 562,
+        "HardBounce": 563,
+        "Mobile": 564,
+        "Opens": 565,
+        "SMTPApiError": 566,
+        "SoftBounce": 567,
+        "SpamComplaint": 568,
+        "Tracked": 569,
+        "Transient": 570,
+        "Unique": 571,
+        "Unknown": 572,
+        "WebMail": 573
+      }
+    }
+  },
+  "requests": {
+    "GET /stats/outbound/bounces": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "GET /stats/outbound/opens": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "GET /stats/outbound/opens/emailclients": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "GET /stats/outbound/opens/platforms": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "GET /stats/outbound/spam": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "GET /stats/outbound/tracked": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "GET /stats/outbound/clicks/browserfamilies": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

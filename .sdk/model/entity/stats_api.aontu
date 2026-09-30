@@ -1,0 +1,581 @@
+# Entity: stats_api
+
+main: kit: entity: stats_api: {
+
+  alias: field: {}
+
+  fields: {
+    Date: {
+      h: "Date"
+      n: "Date"
+      r: false
+      t: "`$STRING`"
+    }
+    Days: {
+      h: "Days"
+      n: "Days"
+      r: false
+      t: "`$ARRAY`"
+    }
+    Desktop: {
+      h: "Desktop"
+      n: "Desktop"
+      r: false
+      t: "`$INTEGER`"
+    }
+    HardBounce: {
+      h: "Hard Bounce"
+      n: "HardBounce"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Mobile: {
+      h: "Mobile"
+      n: "Mobile"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Opens: {
+      h: "Opens"
+      n: "Opens"
+      r: false
+      t: "`$INTEGER`"
+    }
+    SMTPApiError: {
+      h: "Smtp Api Error"
+      n: "SMTPApiError"
+      r: false
+      t: "`$INTEGER`"
+    }
+    SoftBounce: {
+      h: "Soft Bounce"
+      n: "SoftBounce"
+      r: false
+      t: "`$INTEGER`"
+    }
+    SpamComplaint: {
+      h: "Spam Complaint"
+      n: "SpamComplaint"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Tracked: {
+      h: "Tracked"
+      n: "Tracked"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Transient: {
+      h: "Transient"
+      n: "Transient"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Unique: {
+      h: "Unique"
+      n: "Unique"
+      r: false
+      t: "`$INTEGER`"
+    }
+    Unknown: {
+      h: "Unknown"
+      n: "Unknown"
+      r: false
+      t: "`$INTEGER`"
+    }
+    WebMail: {
+      h: "Web Mail"
+      n: "WebMail"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "stats_api"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /stats/outbound/bounces"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/stats/outbound/bounces"
+          q: {
+            exist: [
+              "fromdate"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "stats"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "bounces"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Days`"
+          }
+        }
+        {
+          co: {
+            id: "GET /stats/outbound/opens"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/stats/outbound/opens"
+          q: {
+            exist: [
+              "fromdate"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "stats"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "opens"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Days`"
+          }
+        }
+        {
+          co: {
+            id: "GET /stats/outbound/opens/emailclients"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/stats/outbound/opens/emailclients"
+          q: {
+            exist: [
+              "fromdate"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "stats"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "opens"
+            }
+            {
+              lit: "emailclients"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Days`"
+          }
+        }
+        {
+          co: {
+            id: "GET /stats/outbound/opens/platforms"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/stats/outbound/opens/platforms"
+          q: {
+            exist: [
+              "fromdate"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "stats"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "opens"
+            }
+            {
+              lit: "platforms"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Days`"
+          }
+        }
+        {
+          co: {
+            id: "GET /stats/outbound/spam"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/stats/outbound/spam"
+          q: {
+            exist: [
+              "fromdate"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "stats"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "spam"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Days`"
+          }
+        }
+        {
+          co: {
+            id: "GET /stats/outbound/tracked"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/stats/outbound/tracked"
+          q: {
+            exist: [
+              "fromdate"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "stats"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "tracked"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Days`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /stats/outbound/clicks/browserfamilies"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/stats/outbound/clicks/browserfamilies"
+          q: {
+            exist: [
+              "fromdate"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "stats"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "clicks"
+            }
+            {
+              lit: "browserfamilies"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

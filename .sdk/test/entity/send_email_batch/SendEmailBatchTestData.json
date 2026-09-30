@@ -1,0 +1,53 @@
+{
+  "existing": {
+    "send_email_batch": {
+      "SEND_EMAIL_BATCH00": {
+        "ErrorCode": 50,
+        "Message": "s33",
+        "MessageID": "s34",
+        "SubmittedAt": "s35",
+        "To": "s36",
+        "id": "SEND_EMAIL_BATCH00"
+      },
+      "SEND_EMAIL_BATCH01": {
+        "ErrorCode": 100,
+        "Message": "s65",
+        "MessageID": "s66",
+        "SubmittedAt": "s67",
+        "To": "s68",
+        "id": "SEND_EMAIL_BATCH01"
+      },
+      "SEND_EMAIL_BATCH02": {
+        "ErrorCode": 150,
+        "Message": "s97",
+        "MessageID": "s98",
+        "SubmittedAt": "s99",
+        "To": "s9a",
+        "id": "SEND_EMAIL_BATCH02"
+      }
+    }
+  },
+  "new": {
+    "send_email_batch": {
+      "send_email_batch_ref01": {
+        "ErrorCode": 200,
+        "Message": "sc9",
+        "MessageID": "sca",
+        "SubmittedAt": "scb",
+        "To": "scc"
+      }
+    }
+  },
+  "requests": {
+    "POST /email/batch": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    },
+    "POST /email/batchWithTemplates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "swagger2"
+    }
+  }
+}

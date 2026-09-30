@@ -1,0 +1,99 @@
+# Entity: sent_count
+
+main: kit: entity: sent_count: {
+
+  alias: field: {}
+
+  fields: {
+    Date: {
+      h: "Date"
+      n: "Date"
+      r: false
+      t: "`$STRING`"
+    }
+    Sent: {
+      h: "Sent"
+      n: "Sent"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "sent_count"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /stats/outbound/sends"
+            source: "swagger2"
+            version: 2
+          }
+          g: {
+            header: [
+              {
+                k: "header"
+                n: "x_postmark_server_token"
+                or: "X-Postmark-Server-Token"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "fromdate"
+                or: "fromdate"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "tag"
+                or: "tag"
+                r: false
+                t: "`$ANY`"
+              }
+              {
+                k: "query"
+                n: "todate"
+                or: "todate"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/stats/outbound/sends"
+          q: {
+            exist: [
+              "fromdate"
+              "tag"
+              "todate"
+              "x_postmark_server_token"
+            ]
+          }
+          s: [
+            {
+              lit: "stats"
+            }
+            {
+              lit: "outbound"
+            }
+            {
+              lit: "sends"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.Days`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

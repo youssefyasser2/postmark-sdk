@@ -23,3 +23,24 @@
 # A published package name that does not follow the derivation:
 #
 #   main: kit: target: ts: publish: registry: package: '@scope/name'
+
+# Project-specific README content is model-owned so regeneration preserves it.
+main: kit: info: {
+  about_md: `This is an **UNOFFICIAL SDK** for Postmark's public API. It is not affiliated with, endorsed by, or sponsored by Postmark.
+
+## Install from source
+
+From a source checkout, run: git clone <repository-url> postmark-sdk; cd postmark-sdk; npm --prefix ts install; npm --prefix ts run build; python3 -m pip install -e ./py.
+
+## Live authentication quickstart
+
+Set POSTMARK_SERVER_TOKEN in the environment; use POSTMARK_API_TEST for safe smoke calls. Pass it as the X-Postmark-Server-Token header. TypeScript: new PostmarkSDK({ headers: { 'X-Postmark-Server-Token': process.env.POSTMARK_SERVER_TOKEN } }). Python: PostmarkSDK({"headers": {"X-Postmark-Server-Token": os.environ["POSTMARK_SERVER_TOKEN"]}}).
+
+## Offline tests
+
+From the repository root, run: (cd ts && npm install && npm run build && npm test); (cd py && python3 -m pytest).
+
+## How this SDK was generated
+
+This is a Voxgig @voxgig/sdkgen project generated from server.yml, copied into .sdk/def/server.yml. The exact commands were: cd ..; npx @voxgig/create-sdkgen postmark -d postmark-sdk/server.yml -t ts,py -f test; cd postmark-sdk/.sdk; npm run build; npm run generate.
+`
