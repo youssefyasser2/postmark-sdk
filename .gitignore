@@ -13,10 +13,23 @@ build/
 coverage/
 .pytest_cache/
 __pycache__/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+*.egg-info/
+.venv/
+venv/
 
 # Dependencies (no trailing slash: also ignores node_modules SYMLINKS, e.g.
 # ts/node_modules -> shared tree, which a dir-only rule leaves tracked)
 node_modules
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Logs
 *.log
@@ -24,6 +37,7 @@ logs/
 
 # OS
 .DS_Store
+Thumbs.db
 
 # Editor
 *~
