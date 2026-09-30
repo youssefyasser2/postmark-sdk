@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Postmark SDK Project",
   "scripts": {
-    "generate": "node build/docgen.js && tsc --build src && voxgig-model model/sdk.aontu && voxgig-model test/test.aontu",
+    "generate": "node scripts/prepare-docgen.js && tsc --build src && voxgig-model model/sdk.aontu && voxgig-model test/test.aontu",
     "watch-generate": "voxgig-model -w model/sdk.aontu",
     "dry-generate": "tsc --build src && voxgig-model -y model/sdk.aontu",
     "watch-dry-generate": "voxgig-model -w -y model/sdk.aontu",
@@ -20,7 +20,7 @@
     "dry-add-feature": "voxgig-sdkgen -y feature add",
     "add-edition": "voxgig-sdkgen edition add",
     "text-qa": "cd .. && voxgig-docgen qa",
-    "postinstall": "node build/docgen.js",
+    "postinstall": "node scripts/prepare-docgen.js",
     "status": "bash admin/status.sh",
     "check-drift": "bash admin/check-drift.sh"
   },
